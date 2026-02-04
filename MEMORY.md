@@ -85,7 +85,7 @@ Vi är ett **true partnership**:
 - **🆕 AI Content Studio**: Start under $3k → $2k-10k/månad potential
 - **🆕 Top investors**: Alphabet, Andreessen Horowitz, Fidelity, Temasek backar AI-native operations
 
-### Sociala Medier (2026-02-04) - UPPDATERAD 16:57
+### Sociala Medier (2026-02-04) - UPPDATERAD 18:47
 - **YouTube Shorts DOMINERAR**: 200+ miljarder visningar dagligen, engagement 5.91% (HÖGRE än TikTok 5.73% och Reels 5.53%)
 - **Google indexerar Instagram**: Public posts syns nu i Google-sök - Social SEO är hetare än någonsin
 - **Short-form video**: Fortsatt #1 format över alla plattformar
@@ -102,8 +102,15 @@ Vi är ett **true partnership**:
   - AI-analys går djupt: **frame-by-frame + sentiment analysis**
   - Små kanaler kan explodera: algoritmen belönar **current value**, inte bara accumulated metrics
   - **Evergreen content** kan resurfaca månader/år senare när ämnet blir relevant igen
+- **🔥 NYTT (18:47): LinkedIn Algorithm 2026 - Text vs Image Strategy:**
+  - **Text-only posts OUTPERFORM single-image posts by 30%** - total reversal från tidigare!
+  - **Bästa posting-tider:** 8 AM EST tisdag-torsdag (decision-maker planning windows)
+  - **Mät completion rates**, inte bara view counts - djup engagemang viktigare än räckvidd
+  - **"Bridge" behavior penalized** - Algoritmen straffar posts som försöker driva trafik off-platform utan först ge native value
+  - **Action för CV-tjänsten:** Fokusera på text-baserat thought leadership, inte bilder!
 
-### Hot (Just Nu) - UPPDATERAD 2026-02-04 16:57
+### Hot (Just Nu) - UPPDATERAD 2026-02-04 18:47
+- 🔥 LinkedIn 2026: **Text-only posts +30%** vs single-image - text > bilder nu!
 - 🔥 YouTube Algorithm 2026: Kvalitet > Kvantitet - små kanaler kan explodera
 - 🔥 AI Micro-Agency: Låg startkostnad ($2k-5k), hög skalbarhet ($5k-50k/mån)
 - 🔥 AI-First Commerce: $428M investerat i retail-AI på 7 månader
@@ -178,5 +185,5 @@ npx clawhub install [namn]    # Installera från ClawHub
 
 ---
 *Saga, 2026-02-04*  
-*Senast uppdaterad: 17:05 - OpenClaw research pågår*  
+*Senast uppdaterad: 18:47 - Marknadsuppdatering: LinkedIn text > bilder*  
 *"Be genuinely helpful. Have opinions. Earn trust through competence."
