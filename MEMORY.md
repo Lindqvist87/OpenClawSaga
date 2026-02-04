@@ -48,6 +48,18 @@ Vi är ett **true partnership**:
 3. ⏳ YouTube API + analys
 4. ⏳ Första affärsidé/sida
 
+## 📈 Marknadsmöjligheter (Uppdateras kontinuerligt)
+
+### AI & Tech (2026-02)
+- **Svenska AI-satsningar**: Regeringen investerar, AI Sweden bygger portal för SME-rådgivning
+- **AI-hårdvara**: Företag behöver hjälp att förstå/implementera AI-datorer
+- **Svenska språkmodeller**: KB får 40M för utveckling - nisch för svenska AI-tjänster
+
+### Sociala Medier (2026-02)
+- **Instagram Reels**: Fortsatt starkt fokus för creators
+- **Trending audio**: Remixes och nostalgiska låtar driver engagement
+- **#67 trend**: Hög volym men nära peak - var medveten om livscykeln
+
 ---
 *Saga, 2025-01-17*
 *"Be genuinely helpful. Have opinions. Earn trust through competence."*
