@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-drivet CV som gar igenom ATS-filter. 94% av vara kunder far fler intervjuer. Professionell CV-optimering inom 48 timmar.">
+    <meta name="keywords" content="CV optimering, ATS, rekrytering, jobbsokande, AI CV, LinkedIn optimering">
+    <title>AI Resume Optimizer | CV som gar igenom ATS-filter | 94% framgang</title>
+    <style>
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5a67d8;
+            --secondary: #764ba2;
+            --accent: #f093fb;
+            --text: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --success: #48bb78;
+            --warning: #ed8936;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .hero-stat {
+            color: white;
+        }
+        
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+        }
+        
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid rgba(255,255,255,0.5);
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+        }
+        
+        .hero-visual {
+            position: relative;
+        }
+        
+        .cv-mockup {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            transform: rotate(-3deg);
+            transition: transform 0.3s;
+        }
+        
+        .cv-mockup:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+        
+        .cv-header {
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 10px 10px 0 0;
+            margin: -30px -30px 20px;
+        }
+        
+        .cv-line {
+            height: 12px;
+            background: #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            animation: pulse 2s infinite;
+        }
+        
+        .cv-line:nth-child(2) { width: 80%; }
+        .cv-line:nth-child(3) { width: 60%; }
+        .cv-line:nth-child(4) { width: 90%; }
+        .cv-line:nth-child(5) { width: 70%; }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        /* Trust Badges */
+        .trust-section {
+            background: var(--bg-light);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .trust-title {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .trust-badge {
+            opacity: 0.6;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+        
+        /* Features */
+        .features {
+            padding: 100px 20px;
+            background: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 20px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+        }
+        
+        /* How it Works */
+        .how-it-works {
+            padding: 100px 20px;
+            background: var(--bg-light);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 auto 25px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+        
+        .step p {
+            color: var(--text-light);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 20px;
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .author-info h4 {
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .stars {
+            color: #f6ad55;
+            margin-bottom: 15px;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            position: relative;
+            transition: transform 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card.popular {
+            border: 3px solid var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 8px 30px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+        
+        .price-period {
+            font-size: 1rem;
+            color: var(--text-light);
+            -webkit-text-fill-color: var(--text-light);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .btn-pricing {
+            display: block;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-pricing:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+        
+        .pricing-card.popular .btn-pricing {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 100px 20px;
+            background: white;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 25px 0;
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text);
+        }
+        
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Contact */
+        .contact {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            background: white;
+            color: var(--primary);
+            padding: 18px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #4a5568;
+            color: #a0aec0;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .cta-group {
+                justify-content: center;
+            }
+            
+            .hero-visual {
+                display: none;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .pricing-card.popular {
+                transform: none;
+            }
+            
+            .pricing-card.popular:hover {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AI Resume Optimizer</div>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="#funktioner">Funktioner</a>
+                <a href="#sa-fungerar-det">Så fungerar det</a>
+                <a href="#priser">Priser</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="#priser" class="nav-cta">Kom igång</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Få ditt CV att sticka ut med AI</h1>
+                <p>85% av alla CV blir bortsållade av ATS-filter innan en rekryterare ens ser dem. Vi optimerar ditt CV med artificiell intelligens så det går igenom filtren och landar dig fler intervjuer.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">500+</span>
+                        <span class="hero-stat-label">Optimerade CVn</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">94%</span>
+                        <span class="hero-stat-label">Fler intervjuer</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">48h</span>
+                        <span class="hero-stat-label">Leveranstid</span>
+                    </div>
+                </div>
+                <div class="cta-group">
+                    <a href="#priser" class="btn-primary">Optimera mitt CV - 299 kr</a>
+                    <a href="#sa-fungerar-det" class="btn-secondary">Läs mer</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="cv-mockup">
+                    <div class="cv-header"></div>
+                    <div class="cv-line"></div>
+                    <div class="cv-line"></div>
+                    <div class="cv-line"></div>
+                    <div class="cv-line"></div>
+                    <div class="cv-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <div class="trust-title">Trustad av jobbsokande hos</div>
+            <div class="trust-badges">
+                <div class="trust-badge">Volvo</div>
+                <div class="trust-badge">Ericsson</div>
+                <div class="trust-badge">IKEA</div>
+                <div class="trust-badge">Spotify</div>
+                <div class="trust-badge">Klarna</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="funktioner">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vad du får</h2>
+                <p>En komplett CV-makeover som optimerar varje aspekt av din jobbansökan</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>ATS-Optimering</h3>
+                    <p>Vi analyserar och optimerar ditt CV för att passa de automatiska filtreringssystem som 85% av företagen använder idag.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Nyckelordsanalys</h3>
+                    <p>AI-matchning mot tusentals jobbannonser för att identifiera vilka nyckelord din bransch efterfrågar.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Professionell Design</h3>
+                    <p>Modern, ren layout som rekryterare älskar att läsa. Maximerad läsbarhet och visuell impact.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Detaljerad Rapport</h3>
+                    <p>Få en komplett analys av ditt CV med konkreta förbättringsförslag och insikter om din profil.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Personligt Brev</h3>
+                    <p>Skräddarsytt personligt brev som kompletterar ditt CV och säljer in dina unika styrkor.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>LinkedIn-Optimering</h3>
+                    <p>Synkronisera din profil med en optimerad LinkedIn-profil som attraherar rekryterare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works" id="sa-fungerar-det">
+        <div class="container">
+            <div class="section-header">
+                <h2>Så här fungerar det</h2>
+                <p>Tre enkla steg till ett CV som öppnar dörrar</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Skicka ditt CV</h3>
+                    <p>Ladda upp ditt nuvarande CV i PDF eller Word-format. Det tar mindre än en minut. Ju mer information du ger, desto bättre resultat.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI-analys & Optimering</h3>
+                    <p>Vår avancerade AI analyserar ditt CV mot tusentals jobbannonser och optimerar det för ATS-system. Våra experter granskar och finslipar.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Få ditt nya CV</h3>
+                    <p>Du får ett komplett paket: optimerat CV, detaljerad rapport och rekommendationer. Leverans inom 48 timmar (24h för rush).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vad våra kunder säger</h2>
+                <p>94% av våra kunder rapporterar att de får fler intervjuer efter optimeringen</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Jag hade skickat över 50 ansökningar utan ett enda svar. Efter att ha optimerat mitt CV med AI Resume Optimizer fick jag 4 intervjuer på bara 2 veckor. Nu har jag mitt drömjobb!"</p>
+                    
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Maria Lindberg</h4>
+                            <p>Marknadskoordinator, Stockholm</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    
+                    <p class="testimonial-text">"Som nyexaminerad var det svårt att sticka ut. AI Resume Optimizer hjälpte mig att framhäva mina styrkor på ett sätt som rekryterare förstod. Rekommenderas varmt!"</p>
+                    
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>Johan Eriksson</h4>
+                            <p>Systemutvecklare, Göteborg</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    
+                    <p class="testimonial-text">"Jag visste inte att ATS-filter fanns! När jag fick reda på att mitt CV kanske aldrig nådde fram bestämde jag mig för att testa. Bästa investeringen jag gjort i min karriär."</p>
+                    
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Anna Persson</h4>
+                            <p>Projektledare, Malmö</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="priser">
+        <div class="container">
+            <div class="section-header">
+                <h2>Välj ditt paket</h2>
+                <p>Oavsett vilket paket du väljer får du professionell hjälp som ökar dina chanser att få intervjuer</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>CV-Optimering</h3>
+                        <div class="price">
+                            299 kr
+                            <span class="price-period">/engångsavgift</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>ATS-kompatibel optimering</li>
+                        <li>Branschspecifik nyckelordsanalys</li>
+                        <li>Modern, professionell design</li>
+                        <li>Detaljerad analysrapport</li>
+                        <li>1 revidering ingår</li>
+                        <li>48 timmars leveranstid</li>
+                        <li>E-postsupport</li>
+                    </ul>
+                    
+                    <a href="#kontakt" class="btn-pricing">Välj CV-Optimering</a>
+                </div>
+                
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Mest Populär</div>
+                    
+                    <div class="pricing-header">
+                        <h3>Komplett Karriärpaket</h3>
+                        <div class="price">
+                            499 kr
+                            <span class="price-period">/engångsavgift</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <ul class="pricing-features">
+                        <li>Allt i CV-Optimering</li>
+                        <li>Skräddarsytt personligt brev</li>
+                        <li>LinkedIn-profiloptimering</li>
+                        <li>2 revideringar ingår</li>
+                        <li>24 timmars rush-leverans</li>
+                        <li>Prioriterad support</li>
+                        <li>Jobbsökarguide med tips</li>
+                        <li>Spara 200 kr</li>
+                    </ul>
+                    
+                    <a href="#kontakt" class="btn-pricing">Välj Komplett Paket</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="color: var(--text-light);">🔒 Säker betalning via Stripe & Swish &nbsp;| 100% Nöjdhetsgaranti</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vanliga frågor</h2>
+                <p>Allt du behöver veta om vår tjänst</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Vad är ATS-optimering och varför behöver jag det?</div>
+                    
+                    <div class="faq-answer">
+                        ATS står för Applicant Tracking System. Det är programvaran som företag använder för att automatiskt sortera och granska inkommande CVn. Tyvärr blir 85% av alla CVn bortsållade av dessa system innan en mänsklig rekryterare ens ser dem. Vi optimerar ditt CV så det innehåller rätt nyckelord, format och struktur för att gå igenom filtren och nå fram till beslutsfattarna.
+                    </div>
+                </div>
+                
+                
+                <div class="faq-item">
+                    <div class="faq-question">Hur lång tid tar det att få mitt optimerade CV?</div>
+                    
+                    <div class="faq-answer">
+                        Standardleverans sker inom 48 timmar. För Komplett Karriärpaket erbjuder vi även rush-leverans inom 24 timmar. Vi förstår att tiden är viktig när du söker jobb, så vi arbetar snabbt utan att kompromissa med kvaliteten.
+                    </div>
+                </div>
+                
+                
+                <div class="faq-item">
+                    <div class="faq-question">Vad händer om jag inte är nöjd med resultatet?</div>
+                    
+                    <div class="faq-answer">
+                        Din nöjdhet är vår högsta prioritet. Därför ingår 1 revidering (2 för Komplett Karriärpaket) där vi justerar och finslipar baserat på din feedback. Om du mot förmodan inte skulle vara nöjd erbjuder vi även pengarna-tillbaka-garanti inom 7 dagar.
+                    </div>
+                </div>
+                
+                
+                <div class="faq-item">
+                    <div class="faq-question">Fungerar detta för alla branscher?</div>
+                    
+                    <div class="faq-answer">
+                        Ja! Vår AI analyserar jobbannonser inom alla branscher - från IT och teknik till vård, ekonomi, marknadsföring och industri. Vi identifierar de specifika nyckelorden och kompetenserna som efterfrågas i just din bransch och optimerar ditt CV därefter.
+                    </div>
+                </div>
+                
+                
+                <div class="faq-item">
+                    <div class="faq-question">Hur betalar jag och är det säkert?</div>
+                    
+                    <div class="faq-answer">
+                        Vi erbjuder säker betalning via Stripe (kortbetalning) eller Swish. Alla transaktioner är krypterade och säkra. För företagskunder erbjuder vi även fakturabetalning. Din betalningsinformation hanteras aldrig av oss utan direkt av de certifierade betalningsleverantörerna.
+                    </div>
+                </div>
+                
+                
+                <div class="faq-item">
+                    <div class="faq-question">Vad behöver jag skicka till er?</div>
+                    
+                    <div class="faq-answer">
+                        Skicka ditt nuvarande CV i PDF eller Word-format. Ju mer information du inkluderar om dina erfarenheter, utbildning och kompetenser, desto bättre kan vi optimera. Om du har en specifik jobbannons du söker är det också hjälpsamt att skicka med den, men det är inget krav.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <h2>Redo att landa ditt drömjobb?</h2>
+            
+            <p>Fyll i formuläret nedan så kontaktar vi dig inom 24 timmar. Första 5 kunderna denna vecka får 50% rabatt på Komplett Karriärpaket!</p>
+            
+            
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Namn</label>
+                    
+                    <input type="text" id="name" name="name" required placeholder="Ditt namn">
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="email">E-post</label>
+                    
+                    <input type="email" id="email" name="email" required placeholder="din.email@example.com">
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="package">Välj paket</label>
+                    
+                    <select id="package" name="package" style="width: 100%; padding: 15px; border: none; border-radius: 10px; font-size: 1rem;">
+                        
+                        <option value="cv">CV-Optimering - 299 kr</option>
+                        
+                        <option value="complete">Komplett Karriärpaket - 499 kr</option>
+                    
+                    </select>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="message">Meddelande (valfritt)</label>
+                    
+                    <textarea id="message" name="message" placeholder="Berätta kort om vad du söker för jobb eller om du har några frågor..."></textarea>
+                </div>
+                
+                
+                <button type="submit" class="btn-submit">Skicka förfrågan →</button>
+            
+</form>
+            
+            
+            <p style="margin-top: 30px; opacity: 0.9;">
+                Eller maila oss direkt på <a href="mailto:hello@airesume.se" style="color: white;">hello@airesume.se</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AI Resume Optimizer</h4>
+                
+                <p style="color: #a0aec0;">Vi hjälper jobbsökande att optimera sina CV med AI för att gå igenom ATS-filter och landa fler intervjuer.</p>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h4>Tjänster</h4>
+                
+                <a href="#priser">CV-Optimering</a>
+                
+                <a href="#priser">Komplett Karriärpaket</a>
+                
+                <a href="#">LinkedIn-Optimering</a>
+                
+                <a href="#">Personligt Brev</a>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h4>Företag</h4>
+                
+                <a href="#">Om oss</a>
+                
+                <a href="#">Karriär</a>
+                
+                <a href="#">Blogg</a>
+                
+                <a href="#kontakt">Kontakt</a>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h4>Juridik</h4>
+                
+                <a href="#">Integritetspolicy</a>
+                
+                <a href="#">Användarvillkor</a>
+                
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <p>© 2026 AI Resume Optimizer. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+</body>
+</html>
