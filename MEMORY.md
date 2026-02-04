@@ -87,7 +87,7 @@ Vi är ett **true partnership**:
 - **🆕 AI Content Studio**: Start under $3k → $2k-10k/månad potential
 - **🆕 Top investors**: Alphabet, Andreessen Horowitz, Fidelity, Temasek backar AI-native operations
 
-### Sociala Medier (2026-02-04) - UPPDATERAD 18:47
+### Sociala Medier (2026-02-04) - UPPDATERAD 21:10
 - **YouTube Shorts DOMINERAR**: 200+ miljarder visningar dagligen, engagement 5.91% (HÖGRE än TikTok 5.73% och Reels 5.53%)
 - **Google indexerar Instagram**: Public posts syns nu i Google-sök - Social SEO är hetare än någonsin
 - **Short-form video**: Fortsatt #1 format över alla plattformar
@@ -97,6 +97,12 @@ Vi är ett **true partnership**:
 - **🔥 NYTT: Shorts som trailers** - YouTube länkar Shorts/long-form mer medvetet i algoritmen
 - **🔥 NYTT: Employee influencers** - Företag använder egna anställda som influencers istället för externa creators
 - **🔥 NYTT: Multi-media content** - Video + bilder + interaktivitet krävs för synlighet i AI-summaries era
+- **🔥 NYTT (21:10):** LinkedIn personliga profiler DOMINERAR - 65% av feeds vs 5% företagssidor. Organic reach sjönk 60% 2024-2026!
+- **🔥 NYTT (21:10):** LinkedIn straffar externa länkar med 60% lägre distribution - native content är KUNG
+- **🔥 NYTT (21:10):** "Human-first AI content" trend 2026 - publiken avvisar robotiska meddelanden, vill ha autentiskt
+- **🔥 NYTT (21:10):** Social SEO exploderar - användare söker på TikTok/Instagram/YouTube INNAN Google
+- **🔥 NYTT (21:10):** Mikro-communitys > följarantal 2026 - små engagerade grupper ger högre konvertering
+- **🔥 NYTT (21:10):** YouTube har betalat $100B till creators på 4 år - 2026 fokus: AI-verktyg + fler intäktsalternativ för vertical video
 - **⚠️ OBS: Passiv engagement** - Kommentarer ner 24% (TikTok) och 16% (Instagram) - folk konsumerar mer, engagerar mindre
 - **🆕 Algorithm 2026 Insights (från Sprout Social/Navigate Video):**
   - Algoritmen analyserar nu **ton, format, struktur, delivery style** - inte bara nyckelord
@@ -117,18 +123,22 @@ Vi är ett **true partnership**:
   - **PDF Carousels:** Hög dwell-time format som presterar starkt
   - **Niche authority > Generalist:** Algoritmen belönar creators som dominerar ett specifikt ämne
 
-### Hot (Just Nu) - UPPDATERAD 2026-02-04 20:39
+### Hot (Just Nu) - UPPDATERAD 2026-02-04 21:10
+- 🔥 **LinkedIn personliga profiler 65% vs företag 5%** - Organic reach sjönk 60%!
+- 🔥 **Externa länkar straffas med 60%** - native content är enda vägen
 - 🔥 LinkedIn 2026: **Text-only posts +30%** vs single-image - text > bilder nu!
 - 🔥 **LinkedIn "360Brew" Algorithm:** Internt namn bekräftat - fokus på niche authority
 - 🔥 **Engagement velocity:** Första timmen KRITISK - algoritmen mäter hastighet på engagemang
 - 🔥 **Strategisk kommentering:** Kommentera på top-tier konton för att "låna" deras authority
+- 🔥 **Human-first AI content 2026** - publiken avvisar robotiska meddelanden
+- 🔥 **Social SEO exploderar** - användare söker på sociala plattformar INNAN Google
+- 🔥 **Mikro-communitys > följarantal** - små engagerade grupper ger högre konvertering
 - 🔥 YouTube Algorithm 2026: Kvalitet > Kvantitet - små kanaler kan explodera
+- 🔥 **YouTube $100B till creators på 4 år** - 2026: fler intäktsalternativ för vertical video
 - 🔥 AI Micro-Agency: Låg startkostnad ($2k-5k), hög skalbarhet ($5k-50k/mån)
 - 🔥 AI-First Commerce: $428M investerat i retail-AI på 7 månader
 - 🔥 Social SEO: Google indexerar Instagram - stort för content creators
 - 🔥 Svensk AI-scen extremt het (funding, unicorns, Intel-satsning)
-- 🔥 **Sana AI Access Initiative:** Sverige satsar på bred AI-tillgång i samhället
-- 🔥 **Funding trends 2026:** Autonoma system, stablecoin infrastructure, embodied AI
 
 ## 🤖 OpenClaw/Clawbot - Kunskapsbas (Uppdaterad 2026-02-04)
 
@@ -198,5 +208,5 @@ npx clawhub install [namn]    # Installera från ClawHub
 
 ---
 *Saga, 2026-02-04*  
-*Senast uppdaterad: 20:39 - Marknadsuppdatering: LinkedIn 360Brew bekräftat*  
+*Senast uppdaterad: 21:10 - Marknadsbevakning: LinkedIn algoritm 2026 insights, Social SEO-trender, YouTube creator economy*  
 *"Be genuinely helpful. Have opinions. Earn trust through competence."
