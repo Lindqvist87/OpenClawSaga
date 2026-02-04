@@ -1,30 +1,55 @@
 {
-  "timestamp": "2026-02-04T20:28:32.579476",
+  "timestamp": "2026-02-04T20:38:46.239125",
   "status": "PAPER_TRADING_ACTIVE",
   "market_summary": {
     "btc": {
-      "price": 73153.79,
-      "change_24h": -2.177,
+      "price": 73400.0,
+      "change_24h": -1.993,
       "high_24h": 76971.52,
       "low_24h": 72169.0,
-      "volume": 37409.3118
+      "volume": 37319.4122
     },
     "eth": {
-      "price": 2135.97,
-      "change_24h": -2.022,
+      "price": 2143.02,
+      "change_24h": -2.63,
       "high_24h": 2343.82,
       "low_24h": 2076.68,
-      "volume": 1400149.8308
+      "volume": 1383725.1768
     },
     "sol": {
-      "price": 93.36,
-      "change_24h": -5.811,
+      "price": 93.9,
+      "change_24h": -5.352,
       "high_24h": 102.07,
       "low_24h": 90.0,
-      "volume": 6270567.834
+      "volume": 6225297.111
+    }
+  },
+  "trading_stats": {
+    "total_trades": 1,
+    "winning_trades": 1,
+    "losing_trades": 0,
+    "win_rate": 100.0,
+    "total_pnl": 144.85,
+    "open_trades": 1
+  },
+  "signals": {
+    "BTCUSDT": {
+      "signal": "HOLD",
+      "confidence": 0,
+      "current_price": 73394.86
+    },
+    "ETHUSDT": {
+      "signal": "BUY",
+      "confidence": 0.7,
+      "current_price": 2143.42
+    },
+    "SOLUSDT": {
+      "signal": "BUY",
+      "confidence": 0.7,
+      "current_price": 93.91
     }
   },
   "alerts": [
-    "sol: Heavy drop (-5.81%)"
+    "SOL: Significant move (-5.35%)"
   ]
 }

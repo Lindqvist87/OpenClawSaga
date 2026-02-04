@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-02-04T20:32:11.802122",
+  "prices": {
+    "BTCUSDT": 73152.14,
+    "ETHUSDT": 2136.15,
+    "SOLUSDT": 93.42
+  },
+  "signals": {
+    "BTCUSDT": {
+      "signal": "HOLD",
+      "reason": "No clear signal",
+      "confidence": 0.0,
+      "current_price": 73104.02,
+      "sma_10": 73483.361,
+      "sma_20": 73300.2045,
+      "sma_50": 73421.04359999999,
+      "volume_spike": false
+    },
+    "ETHUSDT": {
+      "signal": "BUY",
+      "reason": "Uptrend confirmed",
+      "confidence": 0.6,
+      "current_price": 2135.76,
+      "sma_10": 2148.9080000000004,
+      "sma_20": 2133.9155,
+      "sma_50": 2133.5482000000006,
+      "volume_spike": false
+    },
+    "SOLUSDT": {
+      "signal": "BUY",
+      "reason": "Uptrend confirmed",
+      "confidence": 0.6,
+      "current_price": 93.44,
+      "sma_10": 93.274,
+      "sma_20": 92.34899999999999,
+      "sma_50": 92.05240000000002,
+      "volume_spike": false
+    }
+  },
+  "portfolio_value": 1020.0,
+  "stats": {
+    "total_trades": 0,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "open_trades": 1
+  },
+  "closed_trades": [],
+  "new_trade": {
+    "id": 1,
+    "symbol": "ETHUSDT",
+    "side": "BUY",
+    "price": 2136.15,
+    "quantity": 0.009362638391498724
+  }
+}

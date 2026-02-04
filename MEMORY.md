@@ -75,8 +75,10 @@ Vi är ett **true partnership**:
 
 ## 📈 Marknadsmöjligheter (Uppdateras kontinuerligt)
 
-### AI & Tech (2026-02-04) - UPPDATERAD 16:57
+### AI & Tech (2026-02-04) - UPPDATERAD 20:39
 - **Svenska AI-satsningar**: AI Sweden stöttar 100+ SMEs i Västsverland - möjlighet för AI-rådgivning
+- **Sana AI Access Initiative:** Sverige satsar på bred AI-tillgång över hela samhället (bygger på 90-talets PC-satsning)
+- **Funding trends februari 2026:** Autonoma system, stablecoin-infrastruktur, embodied AI får mest kapital
 - **Lovable unicorn**: Svenska AI-bolaget värderat till $1.8B efter $200M runda - Sverige = AI-hotspot
 - **Intel investerar**: Gaudi 2 system till AI Sweden - hårdvaru-kompetens efterfrågas
 - **AI Startup Landscape**: Plattform för att synas som AI-startup (aistartuplandscape.se)
@@ -108,14 +110,25 @@ Vi är ett **true partnership**:
   - **Mät completion rates**, inte bara view counts - djup engagemang viktigare än räckvidd
   - **"Bridge" behavior penalized** - Algoritmen straffar posts som försöker driva trafik off-platform utan först ge native value
   - **Action för CV-tjänsten:** Fokusera på text-baserat thought leadership, inte bilder!
+- **🔥 NYTT (20:39): LinkedIn "360Brew" Algorithm - Djupare insikter:**
+  - **Internt namn:** 360Brew (bekräftat)
+  - **Engagement velocity:** Första timmen efter postning är KRITISK - algoritmen mäter hastigheten på engagemang
+  - **Strategisk kommentering:** Kommentera på top-tier konton i din bransch för att "låna" deras authority och få deras trafik till din profil
+  - **PDF Carousels:** Hög dwell-time format som presterar starkt
+  - **Niche authority > Generalist:** Algoritmen belönar creators som dominerar ett specifikt ämne
 
-### Hot (Just Nu) - UPPDATERAD 2026-02-04 18:47
+### Hot (Just Nu) - UPPDATERAD 2026-02-04 20:39
 - 🔥 LinkedIn 2026: **Text-only posts +30%** vs single-image - text > bilder nu!
+- 🔥 **LinkedIn "360Brew" Algorithm:** Internt namn bekräftat - fokus på niche authority
+- 🔥 **Engagement velocity:** Första timmen KRITISK - algoritmen mäter hastighet på engagemang
+- 🔥 **Strategisk kommentering:** Kommentera på top-tier konton för att "låna" deras authority
 - 🔥 YouTube Algorithm 2026: Kvalitet > Kvantitet - små kanaler kan explodera
 - 🔥 AI Micro-Agency: Låg startkostnad ($2k-5k), hög skalbarhet ($5k-50k/mån)
 - 🔥 AI-First Commerce: $428M investerat i retail-AI på 7 månader
 - 🔥 Social SEO: Google indexerar Instagram - stort för content creators
 - 🔥 Svensk AI-scen extremt het (funding, unicorns, Intel-satsning)
+- 🔥 **Sana AI Access Initiative:** Sverige satsar på bred AI-tillgång i samhället
+- 🔥 **Funding trends 2026:** Autonoma system, stablecoin infrastructure, embodied AI
 
 ## 🤖 OpenClaw/Clawbot - Kunskapsbas (Uppdaterad 2026-02-04)
 
@@ -185,5 +198,5 @@ npx clawhub install [namn]    # Installera från ClawHub
 
 ---
 *Saga, 2026-02-04*  
-*Senast uppdaterad: 18:47 - Marknadsuppdatering: LinkedIn text > bilder*  
+*Senast uppdaterad: 20:39 - Marknadsuppdatering: LinkedIn 360Brew bekräftat*  
 *"Be genuinely helpful. Have opinions. Earn trust through competence."
