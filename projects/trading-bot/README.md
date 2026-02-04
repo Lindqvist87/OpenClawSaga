@@ -1,238 +1,253 @@
-# 🤖 MICRO-SCALP TRADING BOT
-## Automated Crypto Trading - Paper Trading Mode
+# Micro-Scalp Trading Bot v2.0
 
-**⚠️ SECURITY WARNING:** Due to 386 malicious crypto plugins discovered in OpenClaw's ClawHub, this bot is built from scratch with NO external plugins.
+## Overview
 
----
+An enhanced paper trading bot for cryptocurrency scalp trading with comprehensive technical indicators, backtesting, and real-time dashboard monitoring.
 
-## 🎯 Strategy: "Micro-Scalp"
+**⚠️ PAPER TRADING ONLY - NO REAL MONEY IS USED ⚠️**
 
-**Goal:** Small, consistent profits (0.5-2% per trade)  
-**Risk:** Minimal (strict stop-losses)  
-**Markets:** Bitcoin, Ethereum, Solana  
-**Mode:** Paper Trading (simulated) → Live Trading (after validation)
+## Features
 
-### Why This Strategy?
-- **High frequency:** Many small trades = compound growth
-- **Low risk:** Tight stop-losses (max 1% loss per trade)
-- **Proven concept:** Scalping works in volatile crypto markets
-- **Funding goal:** 15-30% monthly = fund OpenClaw upgrades
+### Technical Indicators
+- **SMA** (10, 20, 50 period) - Simple Moving Averages
+- **EMA** (12, 26 period) - Exponential Moving Averages
+- **RSI** (14 period) - Relative Strength Index for overbought/oversold detection
+- **MACD** (12/26/9) - Moving Average Convergence Divergence with histogram
+- **Bollinger Bands** (20 period, 2 std dev) - Volatility bands with %B indicator
+- **Stochastic Oscillator** (14/3) - Momentum indicator
+- **ATR** (14 period) - Average True Range for volatility-based stops
+- **Volume Profile** - Volume-based support/resistance levels
 
----
+### Signal Generation
+- Multi-indicator scoring system (weighted signals)
+- Confidence-based trading (minimum 60% confidence required)
+- Volume spike detection with trend confirmation
+- Automatic signal validation with multiple confirmations
 
-## 📊 Expected Returns
+### Risk Management
+- Dynamic position sizing based on:
+  - Signal confidence
+  - Volatility (ATR adjustment)
+  - Portfolio value
+- ATR-based stop losses (2x ATR default)
+- Risk:Reward ratio targeting (2:1 default)
+- Daily loss limits (3% default)
+- Maximum trades per day (10 default)
+- Real-time P&L tracking
 
-| Capital | Conservative (15%/month) | Optimistic (30%/month) |
-|---------|-------------------------|----------------------|
-| $100    | $15/month               | $30/month            |
-| $500    | $75/month               | $150/month           |
-| $1000   | $150/month              | $300/month           |
+### Backtesting
+- Historical data backtesting capability
+- Performance metrics:
+  - Win rate
+  - Total return
+  - Max drawdown
+  - Profit factor
+  - Sharpe ratio
 
-**Goal:** Start with $100-500, grow to fund OpenClaw tools and upgrades
+### Dashboard & Reporting
+- Real-time web dashboard (http://localhost:8080)
+- Auto-refreshing metrics
+- Open trade monitoring
+- Risk status tracking
+- API health monitoring
+- Comprehensive statistics
 
----
+## Installation
 
-## 🏗️ Architecture
-
-```
-Price Monitor (Binance API)
-    ↓
-Signal Generator (SMA/EMA/Volume)
-    ↓
-Risk Manager (Position sizing, stops)
-    ↓
-Paper Trader (Simulated trades)
-    ↓
-SQLite Database (Trade history)
-```
-
-### Components:
-1. **PriceMonitor** - Real-time price data from Binance
-2. **SignalGenerator** - Technical analysis (SMA, EMA, volume spikes)
-3. **RiskManager** - Position sizing, stop-loss, daily limits
-4. **PaperTrader** - Simulated trading with $1000 fake money
-5. **MicroScalpBot** - Main orchestrator
-
----
-
-## 🚀 Quick Start
-
-### 1. Install Dependencies
 ```bash
-cd projects/trading-bot
-chmod +x start.sh
-./start.sh
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-Or manually:
+## Usage
+
+### Basic Usage
+
 ```bash
-pip install requests
+# Run the bot with default settings
+python micro_scalp_bot_v2.py
 ```
 
-### 2. Start Paper Trading
-```bash
-python3 micro_scalp_bot.py
-```
+### Configuration
 
-### 3. Monitor Performance
-- Check `trading_bot.log` for activity
-- View trades in `paper_trades.db` (SQLite)
-- Stats printed every minute to console
-
----
-
-## ⚙️ Configuration
-
-Edit `config.py` (copy from `config_template.py`):
+Edit the bot initialization to customize:
 
 ```python
-# Risk Management
-MAX_DAILY_LOSS_PCT = 5.0   # Stop if daily loss >5%
-MAX_POSITION_PCT = 2.0     # Max 2% per trade
-MAX_TRADES_PER_DAY = 10    # Limit trades
-
-# Trading Settings
-STOP_LOSS_PCT = 1.0        # 1% stop loss
-TAKE_PROFIT_PCT = 2.0      # 2% take profit
-CHECK_INTERVAL = 60        # Check every 60 seconds
-
-# Symbols to Trade
-TRADING_SYMBOLS = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
+bot = MicroScalpBot(
+    symbols=['BTCUSDT', 'ETHUSDT', 'SOLUSDT'],  # Trading pairs
+    enable_dashboard=True  # Enable web dashboard
+)
 ```
 
----
+### Risk Management Settings
 
-## 📈 Trading Strategy Details
+```python
+risk_manager = RiskManager(
+    max_daily_loss_pct=3.0,      # Max 3% daily loss
+    max_position_pct=5.0,        # Max 5% per position
+    max_trades_per_day=10,       # Max 10 trades/day
+    atr_multiplier_sl=2.0,       # Stop loss at 2x ATR
+    risk_reward_ratio=2.0        # 2:1 reward to risk
+)
+```
 
-### Entry Signals:
-- **Bullish:** SMA10 > SMA20 > SMA50 + EMA12 > EMA26
-- **Volume Spike:** 2x average volume
-- **Confidence:** >60% required to trade
+### Running Backtest
 
-### Exit Signals:
-- **Stop Loss:** 1% loss (auto-executed)
-- **Take Profit:** 2% gain (auto-executed)
-- **Trailing Stop:** (future feature)
+```python
+# Run backtest before live trading
+bot = MicroScalpBot()
+results = bot.run_backtest('BTCUSDT', days=30)
+```
 
-### Risk Rules:
-- Max 2% of portfolio per trade
-- Max 5% daily loss (then STOP)
-- Max 10 trades per day
-- Only trade spot (no leverage)
+## Project Structure
 
----
+```
+projects/trading-bot/
+├── micro_scalp_bot.py          # Original bot (v1.0)
+├── micro_scalp_bot_v2.py       # Enhanced bot (v2.0)
+├── requirements.txt            # Python dependencies
+├── README.md                   # This file
+├── trading_bot.log            # Bot logs
+└── paper_trades.db            # SQLite database with trades
+```
 
-## 🔄 Autonomous Workflows
+## Database Schema
 
-The bot runs autonomously via OpenClaw Heartbeat:
+### trades table
+- id, symbol, side, entry_price, exit_price
+- quantity, profit_loss, profit_loss_pct
+- entry_time, exit_time, status, strategy
+- stop_loss, take_profit
 
-| Frequency | Task |
-|-----------|------|
-| Every minute | Check prices, generate signals, manage trades |
-| Every 5 minutes | Performance check, risk assessment |
-| Hourly | Risk audit, position review |
-| Daily 08:00 | Morning brief, strategy adjustment |
-| Daily 20:00 | Daily report, GitHub commit |
-| Weekly | Strategy review, optimization |
+### performance table
+- timestamp, balance, equity
+- open_trades, total_trades
 
----
+## Trading Strategy
 
-## 🛡️ Safety Features
+The bot uses a multi-factor scoring system:
 
-1. ✅ **Paper Trading First** - 1-2 weeks validation before real money
-2. ✅ **Strict Stop-Losses** - Max 1% loss per trade
-3. ✅ **Daily Limits** - Stop at 5% daily loss
-4. ✅ **Position Limits** - Max 2% per trade
-5. ✅ **No Leverage** - Spot trading only
-6. ✅ **SQLite Logging** - All trades tracked
-7. ✅ **Auto-Stop** - Bot stops on excessive losses
+1. **Trend Analysis** (weight: 2)
+   - Bullish: SMA10 > SMA20 > SMA50
+   - Bearish: SMA10 < SMA20 < SMA50
 
----
+2. **RSI Analysis** (weight: 2)
+   - Oversold (< 30): Buy signal
+   - Overbought (> 70): Sell signal
 
-## 📊 Performance Tracking
+3. **MACD Analysis** (weight: 2)
+   - Bullish crossover: Buy signal
+   - Bearish crossover: Sell signal
 
-The bot automatically tracks:
-- Win rate (% profitable trades)
-- Average profit per trade
+4. **Bollinger Bands** (weight: 1.5)
+   - Near lower band: Buy signal
+   - Near upper band: Sell signal
+
+5. **Volume Analysis** (weight: 1.5)
+   - Volume spike + trend direction
+
+6. **Stochastic** (weight: 1)
+   - Oversold/overbought detection
+
+7. **EMA Crossover** (weight: 1)
+   - EMA12 vs EMA26
+
+**Signal Threshold**: 60% confidence required to trade
+
+## Performance Metrics
+
+The bot tracks:
+- Win rate
 - Total P&L
-- Max drawdown
-- Daily/weekly/monthly returns
+- Average profit/loss per trade
+- Profit factor
+- Maximum drawdown
+- Sharpe ratio
+- Total return percentage
+
+## Safety Features
+
+1. **Paper Trading Only**: No real API keys for trading
+2. **Daily Loss Limits**: Trading stops after hitting limit
+3. **Position Limits**: Maximum exposure per trade
+4. **Stop Losses**: Automatic ATR-based stops
+5. **Error Handling**: Graceful handling of API failures
+6. **Rate Limiting**: Respects API limits
+
+## Monitoring
+
+### Console Output
+Real-time status printed every 5 cycles:
+- Balance and equity
+- Win rate and P&L
+- Open trades with unrealized P&L
 - Risk metrics
 
-View stats in real-time or query SQLite database.
+### Web Dashboard
+Available at http://localhost:8080:
+- Real-time metrics
+- Auto-refresh (10 seconds)
+- Open trade details
+- Risk status
+- Signal statistics
+- API health
 
----
+### Logs
+All activity logged to `trading_bot.log`:
+- Trade entries/exits
+- Signal generation
+- Errors and warnings
+- Performance snapshots
 
-## 🚨 Warnings
+## Improvements from v1.0
 
-**⚠️ CRITICAL:**
-- This is NOT financial advice
-- Crypto trading is HIGH RISK
-- Only trade money you can afford to lose
-- Past performance ≠ future results
-- Bot can lose money - risk management is key
+| Feature | v1.0 | v2.0 |
+|---------|------|------|
+| Indicators | SMA, EMA, Volume | RSI, MACD, Bollinger, Stochastic, ATR |
+| Signal Scoring | Basic | Multi-factor weighted |
+| Position Sizing | Fixed % | Dynamic (confidence + ATR) |
+| Stop Loss | Fixed 1% | ATR-based (2x ATR) |
+| Backtesting | No | Yes |
+| Dashboard | No | Yes (web) |
+| Risk Management | Basic | Enhanced with limits |
+| Database | Trades only | Trades + Performance |
+| Logging | Basic | Rotating file handler |
+| Fee Simulation | No | Yes (0.1%) |
 
-**Paper Trading Phase:**
-- Run for minimum 1-2 weeks
-- Validate win-rate >50%
-- Ensure strategy works in current market
-- ONLY then consider live trading
+## Troubleshooting
 
----
+### No signals generated
+- Check API connectivity
+- Verify symbol exists on Binance
+- Ensure sufficient historical data (50+ candles)
 
-## 📝 Files
+### Dashboard not accessible
+- Check firewall settings
+- Verify port 8080 is available
+- Try different port in DashboardServer
 
-| File | Description |
-|------|-------------|
-| `micro_scalp_bot.py` | Main trading bot |
-| `config_template.py` | Configuration template |
-| `ARCHITECTURE.md` | Technical architecture |
-| `start.sh` | Quick start script |
-| `trading_bot.log` | Activity log |
-| `paper_trades.db` | SQLite trade database |
+### Database errors
+- Delete `paper_trades.db` to reset
+- Check file permissions
 
----
+## Future Enhancements
 
-## 🎓 How It Works
+Potential improvements:
+- Machine learning signal prediction
+- Multi-timeframe analysis
+- Portfolio optimization
+- Telegram/discord notifications
+- More exchanges support
+- Real trading mode (with proper safeguards)
 
-1. **Price Monitoring** - Bot checks prices every minute
-2. **Signal Generation** - Technical analysis creates BUY/SELL signals
-3. **Risk Check** - Position size calculated, limits verified
-4. **Trade Execution** - Paper trade opened in SQLite database
-5. **Management** - Stop-loss/take-profit monitored continuously
-6. **Reporting** - Stats updated, alerts if limits hit
+## License
 
----
+Personal use only. Not financial advice.
 
-## 🔮 Future Enhancements
+## Disclaimer
 
-- [ ] Discord notifications
-- [ ] More technical indicators (RSI, MACD)
-- [ ] Backtesting module
-- [ ] Multi-exchange arbitrage
-- [ ] ML-based signal generation
-- [ ] Live trading mode (after paper validation)
-
----
-
-## 💰 Funding Goal
-
-**Target:** Generate $150-300/month to fund:
-- OpenClaw upgrades
-- Better AI models
-- Additional tools
-- Infrastructure expansion
-
-**Path:**
-1. Week 1-2: Paper trading validation
-2. Week 3-4: Micro live trading ($100)
-3. Month 2+: Scale to $500-1000 capital
-4. Month 3+: Full operation
-
----
-
-*Built from scratch - NO external plugins*  
-*Security first - Paper trading validation required*  
-*Autonomous operation via OpenClaw Heartbeat*
-
-**READY TO TRADE (PAPER MODE)** 🚀
+**IMPORTANT**: This is a paper trading bot for educational purposes only.
+- Past performance does not guarantee future results
+- Cryptocurrency trading carries significant risk
+- Always test thoroughly before using real funds
+- The authors are not responsible for any losses

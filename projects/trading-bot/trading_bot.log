@@ -1,0 +1,2 @@
+2026-02-04 18:36:20,158 - micro_scalp_bot_v2 - INFO - OPENED BUY trade #1: BTCUSDT @ $50000.00 x 0.1 (SL: $49000.00, TP: $52000.00)
+2026-02-04 18:36:20,222 - micro_scalp_bot_v2 - INFO - CLOSED trade #1: P&L = $144.85 (2.90%) [take_profit]
