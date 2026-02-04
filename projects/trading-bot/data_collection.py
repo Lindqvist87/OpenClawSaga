@@ -333,20 +333,11 @@ def update_price_db(symbol, price_data):
             )
         ''')
     elif 'change_24h' not in columns:
-        # Drop and recreate with full schema
-        cursor.execute("DROP TABLE IF EXISTS price_data")
-        cursor.execute('''
-            CREATE TABLE price_data (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                symbol TEXT,
-                price REAL,
-                change_24h REAL,
-                high_24h REAL,
-                low_24h REAL,
-                volume REAL,
-                timestamp TEXT
-            )
-        ''')
+        # Add missing columns using ALTER TABLE
+        cursor.execute("ALTER TABLE price_data ADD COLUMN change_24h REAL")
+        cursor.execute("ALTER TABLE price_data ADD COLUMN high_24h REAL")
+        cursor.execute("ALTER TABLE price_data ADD COLUMN low_24h REAL")
+        cursor.execute("ALTER TABLE price_data ADD COLUMN volume REAL")
     
     timestamp = datetime.now().isoformat()
     cursor.execute('''
