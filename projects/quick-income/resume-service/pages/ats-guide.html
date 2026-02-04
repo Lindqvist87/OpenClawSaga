@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lär dig hur ATS-system fungerar och varför 85% av CVn aldrig når fram till rekryterare.">
+    <title>Vad är ATS? | AI Resume Optimizer</title>
+    <style>
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5a67d8;
+            --secondary: #764ba2;
+            --text: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .content h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            color: var(--primary-dark);
+        }
+        
+        .content h3 {
+            font-size: 1.3rem;
+            margin: 30px 0 15px;
+            color: var(--text);
+        }
+        
+        .content p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .content ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .content li {
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 15px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.7;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../landing-page-pro.html" class="logo">AI Resume Optimizer</a>
+            <div class="nav-links">
+                <a href="../landing-page-pro.html#funktioner">Funktioner</a>
+                <a href="../landing-page-pro.html#priser">Priser</a>
+                <a href="ats-guide.html">ATS-Guide</a>
+                <a href="../landing-page-pro.html#kontakt">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1>Vad är ATS och varför spelar det roll?</h1>
+        <p>Förstå den dolda barriären mellan dig och ditt drömjobb</p>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+        <h2>Applicant Tracking Systems (ATS) förklarade</h2>
+        
+        <p>Har du någonsin undrat varför du inte får svar på dina jobbansökningar, trots att du är kvalificerad? Sanningen är att ditt CV kanske aldrig når en mänsklig rekryterare. Det stoppas av ett digitalt filter som kallas ATS.</p>
+        
+        <p><strong>ATS (Applicant Tracking System)</strong> är programvara som företag använder för att automatiskt sortera, granska och rangordna inkommande CVn och ansökningar. Systemet skannar varje CV efter specifika nyckelord, kvalifikationer och formatkrav innan det når en mänsklig rekryterare.</p>
+
+        <div class="info-box">
+            <h4>🔍 Visste du att...</h4>
+            <p>Över <strong>75% av alla större företag</strong> och <strong>98% av Fortune 500-företagen</strong> använder ATS-system i sin rekryteringsprocess? Om du söker jobb hos större företag, går ditt CV med största sannolikhet igenom ett ATS-filter först.</p>
+        </div>
+
+        <h2>Hur fungerar ATS?</h2>
+        
+        <p>När du skickar in ditt CV gör ATS-systemet följande på några sekunder:</p>
+        
+        <ul>
+            <li><strong>Skanning och tolkning:</strong> Systemet försöker läsa och tolka informationen i ditt CV</li>
+            <li><strong>Nyckelordsmatchning:</strong> Det jämför ditt CV mot jobbannonsen och söker efter specifika nyckelord</li>
+            <li><strong>Kvalifikationskontroll:</strong> Systemet kontrollerar om du har de erfarenheter och kvalifikationer som krävs</li>
+            <li><strong>Rangordning:</strong> Ditt CV får ett poäng baserat på hur väl det matchar jobbkraven</li>
+            <li><strong>Filtrering:</strong> Endast de högst rankade CVn skickas vidare till rekryterare</li>
+        </ul>
+
+        <h3>Vanliga ATS-system på den svenska marknaden</h3>
+        
+        <ul>
+            <li><strong>Workday</strong> - Används av många stora svenska och internationella företag</li>
+            <li><strong>Oracle Taleo</strong> - Populärt bland teknik- och industri-företag</li>
+            <li><strong>SAP SuccessFactors</strong> - Vanligt hos stora koncerner</li>
+            <li><strong>Teamtailor</strong> - Svenskt ATS populärt hos startups och medelstora företag</li>
+            <li><strong>LinkedIn Recruiter</strong> - Integrerat med LinkedIns plattform</li>
+            <li><strong>SmartRecruiters</strong> - Molnbaserat system som växer i popularitet</li>
+        </ul>
+
+        <h2>De vanligaste anledningarna till att ATS sållar bort CVn</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">75%</span>
+                <div class="stat-label">Av CVn har fel format eller design</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">65%</span>
+                <div class="stat-label">Saknar relevanta nyckelord</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">50%</span>
+                <div class="stat-label">Har komplexa tabeller eller grafik</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">40%</span>
+                <div class="stat-label">Använder ovanliga filformat</div>
+            </div>
+        </div>
+
+        <h3>1. Felaktigt format eller design</h3>
+        
+        <p>ATS-system är programmerade att läsa text, inte att tolka design. Om ditt CV innehåller:</p>
+        
+        <ul>
+            <li>Komplexa tabeller eller kolumner</li>
+            <li>Grafiska element eller ikoner</li>
+            <li>Header/footer med viktig information</li>
+            <li>Text i bilder eller textboxar</li>
+            <li>Ovanliga typsnitt</li>
+        </ul>
+        
+        <p>...kan systemet helt missa kritisk information eller tolka den felaktigt.</p>
+
+        <h3>2. Saknade nyckelord</h3>
+        
+        <p>ATS-system söker aktivt efter specifika ord och fraser som nämns i jobbannonsen. Om jobbet kräver "projektledning" men ditt CV säger "ledde projekt", kanske systemet inte gör kopplingen. Det handlar om exakta matchningar, inte synonymi.</p>
+
+        <div class="info-box">
+            <h4>💡 Tips: Nyckelordsoptimering</h4>
+            <p>Studera jobbannonsen noggrant och använd exakt samma terminologi i ditt CV. Om annonsen nämner "Agile-metodik", skriv inte "arbetade agilt" - använd den exakta formuleringen.</p>
+        </div>
+
+        <h3>3. Fel filformat</h3>
+        
+        <p>Många ATS-system har svårt att läsa filer som inte är i standardformat. Du bör alltid skicka ditt CV som:</p>
+        
+        <ul>
+            <li><strong>PDF</strong> - Det säkraste formatet som bevarar formateringen</li>
+            <li><strong>Word (.docx)</strong> - Också väl accepterat, men kan ibland förstöra design</li>
+        </ul>
+        
+        <p>Undvik Pages, Google Docs-export eller andra ovanliga format.</p>
+
+        <h3>4. Komplexa rubriker och sektioner</h3>
+        
+        <p>Om du använder kreativa rubriker som "Min resa" istället för "Arbetslivserfarenhet", eller "Vad jag är bra på" istället för "Kompetenser", kan ATS-systemet inte kategorisera informationen korrekt.</p>
+
+        <h2>Så påverkar ATS dina chanser att få jobbet</h2>
+        
+        <p>När ditt CV sållas bort av ett ATS-system händer följande:</p>
+        
+        <ul>
+            <li>Ditt CV hamnar aldrig i en rekryterares inkorg</li>
+            <li>Du får inget avslagsmail - bara tystnad</li>
+            <li>Du tror kanske att du inte var kvalificerad, när det egentligen var ett tekniskt problem</li>
+            <li>Du slösar tid på att söka jobb utan att ens bli bedömd</li>
+        </ul>
+
+        <p><strong>Det värsta?</strong> Du vet aldrig att det har hänt. Du bara undrar varför du aldrig får svar.</p>
+
+        <h2>Hur du optimerar ditt CV för ATS</h2>
+        
+        <p>Det goda nyheten är att du kan göra mycket för att öka dina chanser att passera ATS-filtren:</p>
+
+        <h3>Använd standardrubriker</h3>
+        <p>ATS-system är programmerade att känna igen specifika sektionsrubriker. Använd klassiska rubriker som:</p>
+        <ul>
+            <li>Sammanfattning / Profil</li>
+            <li>Arbetslivserfarenhet / Erfarenhet</li>
+            <li>Utbildning</li>
+            <li>Kompetenser / Färdigheter</li>
+            <li>Certifieringar</li>
+        </ul>
+
+        <h3>Infoga relevanta nyckelord</h3>
+        <p>Läs jobbannonsen noggrant och identifiera:</p>
+        <ul>
+            <li>Obligatoriska kvalifikationer</li>
+            <li>Önskade kunskaper</li>
+            <li>Specifik mjukvara eller system</li>
+            <li>Branschspecifik terminologi</li>
+        </ul>
+        <p>Se till att dessa ord återfinns naturligt i ditt CV.</p>
+
+        <h3>Håll det enkelt</h3>
+        <ul>
+            <li>Använd en ren, enkel layout</li>
+            <li>Undvik tabeller, textboxar och komplex grafik</li>
+            <li>Välj standardtypsnitt som Arial, Calibri eller Times New Roman</li>
+            <li>Använd vanliga punktlistor (•) inte specialsymboler</li>
+        </ul>
+
+        <h3>Använd rätt filformat</h3>
+        <p>Spara alltid som PDF om inte annat anges. PDF bevarar din formatering och är universellt läsbart.</p>
+
+        <div class="info-box">
+            <h4>🎯 Vill du vara säker på att ditt CV klarar filtren?</h4>
+            <p>Vår AI-driven CV-optimering analyserar ditt CV mot ATS-krav och optimerar det för att maximera dina chanser. Vi identifierar saknade nyckelord, föreslår förbättringar och skapar en ATS-vänlig version av ditt CV.</p>
+        </div>
+
+        <h2>Vanliga frågor om ATS</h2>
+        
+        <h3>Kan jag "lura" ATS-systemet?</h3>
+        <p>Nej, och du bör inte försöka. Moderna ATS-system är sofistikerade och kan identifiera så kallad "keyword stuffing" (överdriven användning av nyckelord). Det bästa sättet att passera filtren är att genuint matcha jobbkraven och presentera din erfarenhet tydligt.</p>
+
+        <h3>Fungerar ATS likadant överallt?</h3>
+        <p>Nej, olika system har olika kapabiliteter och konfigurationer. Vissa är mer avancerade än andra. Men grundprinciperna är desamma: tydlighet, relevans och korrekt format.</p>
+
+        <h3>Kan mindre företag också använda ATS?</h3>
+        <p>Ja, även om ATS traditionellt varit vanligast hos stora företag, har molnbaserade lösningar gjort systemen tillgängliga och prisvärda även för mindre organisationer. Idag använder allt fler företag med 50+ anställda någon form av ATS.</p>
+
+        <h3>Hur vet jag om ett företag använder ATS?</h3>
+        <p>Det är ofta svårt att veta säkert, men tecken inkluderar:</p>
+        <ul>
+            <li>Du omdirigeras till en tredjepartsplattform när du ansöker</li>
+            <li>Du måste fylla i ett långt formulär med information som redan finns i ditt CV</li>
+            <li>Företaget är större än 100 anställda</li>
+            <li>Ansökningsprocessen känns mycket strukturerad/automatiserad</li>
+        </ul>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Se till att ditt CV klarar ATS-filtren</h2>
+        <p>Få en gratis analys av ditt CV och se exakt vad som behöver förbättras för att du ska nå fram till rekryterare.</p>
+        <a href="../landing-page-pro.html#kontakt" class="btn-primary">Få gratis CV-analys →</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AI Resume Optimizer. Alla rättigheter förbehållna.</p>
+    </footer>
+</body>
+</html>

@@ -50,15 +50,22 @@ Vi är ett **true partnership**:
 
 ## 📈 Marknadsmöjligheter (Uppdateras kontinuerligt)
 
-### AI & Tech (2026-02)
-- **Svenska AI-satsningar**: Regeringen investerar, AI Sweden bygger portal för SME-rådgivning
-- **AI-hårdvara**: Företag behöver hjälp att förstå/implementera AI-datorer
-- **Svenska språkmodeller**: KB får 40M för utveckling - nisch för svenska AI-tjänster
+### AI & Tech (2026-02-04)
+- **Svenska AI-satsningar**: AI Sweden stöttar 100+ SMEs i Västsverland - möjlighet för AI-rådgivning
+- **Lovable unicorn**: Svenska AI-bolaget värderat till $1.8B efter $200M runda - Sverige = AI-hotspot
+- **Intel investerar**: Gaudi 2 system till AI Sweden - hårdvaru-kompetens efterfrågas
+- **AI Startup Landscape**: Plattform för att synas som AI-startup (aistartuplandscape.se)
 
-### Sociala Medier (2026-02)
-- **Instagram Reels**: Fortsatt starkt fokus för creators
-- **Trending audio**: Remixes och nostalgiska låtar driver engagement
-- **#67 trend**: Hög volym men nära peak - var medveten om livscykeln
+### Sociala Medier (2026-02-04)
+- **YouTube Shorts DOMINERAR**: 200+ miljarder visningar dagligen, engagement 5.91% (HÖGRE än TikTok 5.73% och Reels 5.53%)
+- **Google indexerar Instagram**: Public posts syns nu i Google-sök - Social SEO är hetare än någonsin
+- **Short-form video**: Fortsatt #1 format över alla plattformar
+- **Personligt varumärke**: 2026 = året där individuella creators blir "defensible" i sin karriär
+
+### Hot (Just Nu)
+- 🔥 YouTube Shorts engagement rate bäst i klassen
+- 🔥 Social SEO pga Google-indexering av Instagram
+- 🔥 Svensk AI-scen extremt het (funding, unicorns)
 
 ---
 *Saga, 2025-01-17*
