@@ -1,0 +1,109 @@
+{
+  "last_updated": "2026-02-04T19:19:00+01:00",
+  "opportunities": [
+    {
+      "id": "opp-001",
+      "category": "CV/LinkedIn-tjänst",
+      "title": "LinkedIn 360 Brew + CV-optimering paket",
+      "description": "Kombinera CV-optimering med LinkedIn-profiloptimering baserat på nya 2026-algoritmen",
+      "source": "LinkedIn algoritm-uppdatering, Arbetsförmedlingen rekommendation",
+      "discovered": "2026-02-04",
+      "priority": "high",
+      "status": "active",
+      "potential_revenue": "1500-5000 SEK per kund",
+      "action_required": "Uppdatera landningssida, skapa paketering"
+    },
+    {
+      "id": "opp-002", 
+      "category": "AI-tjänster",
+      "title": "AI Micro-Agency för SMEs",
+      "description": "Svenska AI-satsningar växer - 100+ SMEs i Västsverland får stöd. Möjlighet att erbjuda AI-rådgivning.",
+      "source": "AI Sweden, Lovable unicorn ($1.8B)",
+      "discovered": "2026-02-04",
+      "priority": "medium",
+      "status": "research",
+      "potential_revenue": "$2k-5k start → $5k-50k/månad",
+      "action_required": "Researcha AI Sweden SMEs, utveckla erbjudande"
+    },
+    {
+      "id": "opp-003",
+      "category": "Content/Social Media",
+      "title": "YouTube Shorts + Long-form strategi",
+      "description": "Algoritmen 2026 belönar kvalitet över kvantitet. Små kanaler kan explodera. Shorts som trailers för långform.",
+      "source": "YouTube Algorithm 2026 insights, 200+ miljarder dagliga visningar Shorts",
+      "discovered": "2026-02-04",
+      "priority": "high",
+      "status": "ready_to_execute",
+      "potential_revenue": "Ad revenue, affiliate, sponsorships",
+      "action_required": "Återstarta @SimpleStartAI med ny strategi"
+    },
+    {
+      "id": "opp-004",
+      "category": "Trading/Finance",
+      "title": "Micro-Scalp Trading Bot",
+      "description": "Automatiserad trading med strikt riskhantering. Paper trading aktiv.",
+      "source": "HEARTBEAT.md trading workflow",
+      "discovered": "2026-02-04",
+      "priority": "high",
+      "status": "in_progress",
+      "potential_revenue": "$150-300/månad initialt",
+      "action_required": "Fortsätt paper trading, validera strategi"
+    },
+    {
+      "id": "opp-005",
+      "category": "GEO/SEO",
+      "title": "Generative Engine Optimization tjänster",
+      "description": "Nytt område för 2026 - optimering för AI-svar blir allt viktigare",
+      "source": "Marknadsanalys 2026-02-04",
+      "discovered": "2026-02-04",
+      "priority": "medium",
+      "status": "research",
+      "potential_revenue": "Tillval till CV-tjänst",
+      "action_required": "Lär mer om GEO, testa på egen site"
+    }
+  ],
+  "insights": [
+    {
+      "date": "2026-02-04",
+      "insight": "LinkedIn text-only posts outperformar bilder med 30% - total omvändning",
+      "source": "Sprout Social/Navigate Video analysis",
+      "impact": "Högt - påverkar vår content-strategi"
+    },
+    {
+      "date": "2026-02-04", 
+      "insight": "SME-segmentet är nyckeln för 2026 - 90% av företag, huvudingång för nyutexaminerade",
+      "source": "LinkedIn data, Börskollen",
+      "impact": "Medium - rikta CV-tjänsten mot SME-jobb"
+    },
+    {
+      "date": "2026-02-04",
+      "insight": "YouTube algoritmen belönar nuvarande värde, inte subscriber count",
+      "source": "YouTube Algorithm 2026",
+      "impact": "Högt - små kanaler har faktisk chans nu"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "CVkungen.se",
+      "focus": "ATS-optimering",
+      "threat_level": "medium",
+      "last_seen": "2026-02-04",
+      "notes": "Aktiv med innehåll, starkt ATS-fokus"
+    },
+    {
+      "name": "LinkedIn själva",
+      "focus": "AI-driven jobbsökning, profiloptimering",
+      "threat_level": "medium",
+      "last_seen": "2026-02-04",
+      "notes": "Pushar AI-funktioner, blir mer self-service"
+    },
+    {
+      "name": "AIUC (AI-kurser)",
+      "focus": "AI-utbildning inkl CV-optimering",
+      "threat_level": "low",
+      "last_seen": "2026-02-04",
+      "notes": "Utbildningskonkurrens, inte direkt tjänst"
+    }
+  ],
+  "alerts": []
+}
