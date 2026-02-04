@@ -1,0 +1,142 @@
+{
+  "_comment": "MALL - Ersätt YOUR_*_API_KEY med faktiska nycklar",
+  "meta": {
+    "lastTouchedVersion": "2026.2.2-3",
+    "lastTouchedAt": "2026-02-04T13:32:36.314Z"
+  },
+  "env": {
+    "BRAVE_API_KEY": "YOUR_BRAVE_API_KEY"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-04T13:32:36.282Z",
+    "lastRunVersion": "2026.2.2-3",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "nvidia:default": {
+        "provider": "nvidia",
+        "mode": "api_key"
+      },
+      "openai:default": {
+        "provider": "openai",
+        "mode": "api_key"
+      },
+      "kimi-coding:default": {
+        "provider": "kimi-coding",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "replace",
+    "providers": {
+      "nvidia": {
+        "baseUrl": "https://integrate.api.nvidia.com/v1",
+        "apiKey": "YOUR_NVIDIA_API_KEY",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "moonshotai/kimi-k2.5",
+            "name": "Kimi K2.5",
+            "reasoning": false,
+            "input": ["text", "image"],
+            "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0},
+            "contextWindow": 64000,
+            "maxTokens": 2048
+          }
+        ]
+      },
+      "openai": {
+        "baseUrl": "https://api.openai.com/v1",
+        "apiKey": "YOUR_OPENAI_API_KEY",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "gpt-4o",
+            "name": "GPT-4o",
+            "reasoning": false,
+            "input": ["text", "image"],
+            "cost": {"input": 0.0025, "output": 0.01, "cacheRead": 0.00125, "cacheWrite": 0},
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "gpt-4o-mini",
+            "name": "GPT-4o Mini",
+            "reasoning": false,
+            "input": ["text", "image"],
+            "cost": {"input": 0.00015, "output": 0.0006, "cacheRead": 0.000075, "cacheWrite": 0},
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "o3-mini",
+            "name": "o3-mini (Reasoning)",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": {"input": 0.0011, "output": 0.0044, "cacheRead": 0.00055, "cacheWrite": 0},
+            "contextWindow": 200000,
+            "maxTokens": 4096
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "kimi-coding/k2p5"
+      },
+      "models": {
+        "nvidia/moonshotai/kimi-k2.5": {
+          "alias": "kimi",
+          "params": {
+            "thinking": false,
+            "temperature": 0.6,
+            "maxTokens": 2048
+          }
+        },
+        "kimi-coding/k2p5": {
+          "alias": "Kimi K2.5"
+        }
+      },
+      "workspace": "C:\\\\Users\\\\Hejhej\\\\.openclaw\\\\workspace",
+      "compaction": {"mode": "safeguard"},
+      "maxConcurrent": 1,
+      "subagents": {"maxConcurrent": 8}
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave",
+        "apiKey": "YOUR_BRAVE_API_KEY"
+      }
+    }
+  },
+  "messages": {"ackReactionScope": "group-mentions"},
+  "commands": {"native": "auto", "nativeSkills": "auto", "restart": true},
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "dmPolicy": "pairing",
+      "botToken": "YOUR_TELEGRAM_BOT_TOKEN",
+      "groupPolicy": "allowlist",
+      "dms": {},
+      "streamMode": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {"mode": "token", "token": "YOUR_GATEWAY_TOKEN"},
+    "tailscale": {"mode": "off", "resetOnExit": false}
+  },
+  "plugins": {
+    "entries": {"telegram": {"enabled": true}}
+  }
+}
