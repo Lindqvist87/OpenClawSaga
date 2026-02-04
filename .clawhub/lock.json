@@ -31,7 +31,7 @@
     },
     "git-sync": {
       "version": "1.0.0",
-      "installedAt": 1770221509189
+      "installedAt": 1770232643668
     },
     "slack": {
       "version": "1.0.0",
@@ -56,6 +56,10 @@
     "frontend-design": {
       "version": "1.0.0",
       "installedAt": 1770221592209
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1770232632177
     }
   }
 }

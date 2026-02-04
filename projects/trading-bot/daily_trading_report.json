@@ -1,50 +1,30 @@
 {
-  "timestamp": "2026-02-04T19:17:00+01:00",
+  "timestamp": "2026-02-04T20:28:32.579476",
   "status": "PAPER_TRADING_ACTIVE",
   "market_summary": {
     "btc": {
-      "price": 72772.31,
-      "change_24h": -2.53,
+      "price": 73153.79,
+      "change_24h": -2.177,
       "high_24h": 76971.52,
-      "low_24h": 72169.00,
-      "volume": 44290.39
+      "low_24h": 72169.0,
+      "volume": 37409.3118
     },
     "eth": {
-      "price": 2082.38,
-      "change_24h": -4.38,
+      "price": 2135.97,
+      "change_24h": -2.022,
       "high_24h": 2343.82,
-      "low_24h": 2077.21,
-      "volume": 1484599.67
+      "low_24h": 2076.68,
+      "volume": 1400149.8308
     },
     "sol": {
-      "price": 90.65,
-      "change_24h": -8.15,
+      "price": 93.36,
+      "change_24h": -5.811,
       "high_24h": 102.07,
-      "low_24h": 90.00,
-      "volume": 6424972.82
+      "low_24h": 90.0,
+      "volume": 6270567.834
     }
   },
-  "technical_indicators": {
-    "btc_sma_24h": 75412.45,
-    "btc_trend": "below_sma",
-    "support_level": 72000,
-    "resistance_level": 76500
-  },
-  "trading_signals": {
-    "btc": "HOLD",
-    "eth": "HOLD",
-    "sol": "HOLD"
-  },
-  "risk_status": {
-    "daily_loss_limit": 5.0,
-    "current_daily_loss": 0.0,
-    "open_trades": 0,
-    "can_trade": true
-  },
   "alerts": [
-    "Market showing weakness - all majors down",
-    "BTC approaching support at $72k",
-    "SOL down 8% - avoid longs",
-    "Waiting for stabilization before new entries"
+    "sol: Heavy drop (-5.81%)"
   ]
 }

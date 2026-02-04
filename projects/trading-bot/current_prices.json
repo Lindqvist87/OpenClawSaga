@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-02-04T20:19:00+01:00",
+  "collection_run": true,
+  "prices_fetched": {
+    "BTCUSDT": 73593.01,
+    "ETHUSDT": 2154.21,
+    "SOLUSDT": 93.81
+  },
+  "open_trades": 0,
+  "trades_checked": true,
+  "signals_generated": {
+    "BTC": "HOLD - Below SMA, no clear trend",
+    "ETH": "HOLD - Consolidating near support",
+    "SOL": "HOLD - Weak momentum, avoid longs"
+  },
+  "paper_trades_updated": true,
+  "daily_report_updated": true
+}
