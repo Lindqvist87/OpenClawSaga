@@ -12,6 +12,50 @@
     "dont-hack-me": {
       "version": "1.0.1",
       "installedAt": 1770220270785
+    },
+    "resume-builder": {
+      "version": "1.0.0",
+      "installedAt": 1770221487602
+    },
+    "linkedin": {
+      "version": "1.0.0",
+      "installedAt": 1770221491699
+    },
+    "ui-ux-pro-max": {
+      "version": "0.1.0",
+      "installedAt": 1770221499969
+    },
+    "web-design-guidelines": {
+      "version": "1.0.0",
+      "installedAt": 1770221504641
+    },
+    "git-sync": {
+      "version": "1.0.0",
+      "installedAt": 1770221509189
+    },
+    "slack": {
+      "version": "1.0.0",
+      "installedAt": 1770221569067
+    },
+    "discord": {
+      "version": "1.0.1",
+      "installedAt": 1770221573492
+    },
+    "whatsapp-styling-guide": {
+      "version": "1.0.0",
+      "installedAt": 1770221577804
+    },
+    "sag": {
+      "version": "1.0.0",
+      "installedAt": 1770221581932
+    },
+    "openai-image-gen": {
+      "version": "1.0.1",
+      "installedAt": 1770221586685
+    },
+    "frontend-design": {
+      "version": "1.0.0",
+      "installedAt": 1770221592209
     }
   }
 }
