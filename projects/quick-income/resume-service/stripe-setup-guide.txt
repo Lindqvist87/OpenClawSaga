@@ -1,0 +1,65 @@
+# Stripe Setup Guide
+
+## Steg 1: Skapa Stripe-konto
+
+1. Ga till https://stripe.com
+2. Klicka "Start now" och skapa konto med din email
+3. Verifiera email-adressen
+4. Fyll i foretagsinformation (kan vara ditt namn som enskild firma)
+5. Anslut bankkonto for utbetalningar
+
+## Steg 2: Skapa produkter
+
+### Produkt 1: CV-optimering
+- Namn: CV-optimering med AI
+- Pris: 299 SEK
+- Beskrivning: ATS-optimering, nyckelordsanalys, 48h leverans
+
+### Produkt 2: Komplett paket
+- Namn: Komplett paket (CV + Personligt Brev + LinkedIn)
+- Pris: 499 SEK  
+- Beskrivning: Komplett optimering med rush-leverans (24h)
+
+## Steg 3: Skapa Payment Links
+
+1. I Stripe Dashboard, ga till "Payment Links"
+2. Klicka "Create payment link"
+3. Valj produkt
+4. Kopiera lanken
+
+### Dina lankar kommer att se ut sa har:
+CV-optimering: https://buy.stripe.com/xxxxx
+Komplett paket: https://buy.stripe.com/xxxxx
+
+## Steg 4: Integrera pa landningssidan
+
+Ersatt knapparna i HTML-filen med:
+
+```html
+<a href="DIN_STRIPE_LANK_CV" class="cta-button">Betala 299 kr</a>
+
+<a href="DIN_STRIPE_LANK_KOMPLETT" class="cta-button">Betala 499 kr</a>
+```
+
+## Steg 5: Testa kopet
+
+1. Anvand Stripe's test-lage forst
+2. Gor ett testkop med testkort: 4242 4242 4242 4242
+3. Verifiera att du far bekräftelse
+4. Byt till live-lage
+
+## Viktigt att komma ihag
+
+- Stripe tar ca 1.5% + 1.80 kr per transaktion i Sverige
+- Utbetalningar sker normalt inom 7 dagar till ditt bankkonto
+- Du behover fakturera kunden separat om de behover kvitto for foretag
+
+## E-postbekraftelse
+
+Efter betalning, be kunden skicka sitt CV till:
+contact@airesume.se
+
+Skapa ett automatiskt svar i din email som bekräfter:
+- Mottagen betalning
+- Forvantad leveranstid (48h / 24h for rush)
+- Vad de ska skicka (CV i PDF/Word)

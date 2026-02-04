@@ -1,0 +1,168 @@
+# LinkedIn DM-mallar
+
+## MALL 1: Till personer med "Open to Work"-badge
+
+---
+
+Hej [Namn]!
+
+Jag sag att du ar open to work - stort lycka till med sokandet!
+
+Jag hjalper jobbsokande att optimera sina CV med AI sa de gar igenom ATS-filtren som 85% av foretag anvander. Resultatet? 94% av mina kunder rapporterar att de far fler intervjuer.
+
+Erbjudande just nu: Full CV-optimering for 299 kr (ord 499 kr). Leverans inom 48h.
+
+Intresserad av en gratis analys av ditt nuvarande CV forst? Tar 2 minuter sa ser du exakt vad som kan forbattras.
+
+Ha en fin dag!
+[Christian/Saga]
+
+---
+
+## MALL 2: Till nya kontakter/nyexaminerade
+
+---
+
+Hej [Namn]!
+
+Jag ser att du nyligen har examen - grattis!
+
+Som ny pa arbetsmarknaden ar det extra viktigt att ditt CV verkligen sticker ut. Tyvarr blir 85% av alla CVn bortsållade av automatiska system innan en rekryterare ens ser dem.
+
+Jag erbjuder specialpris for nyexaminerade:
+CV-optimering: 299 kr
+CV + Personligt Brev: 399 kr
+
+Det inkluderar ATS-optimering, nyckelordsanalys och 1 revidering.
+
+Vill du ha en gratis snabbanalys av ditt CV forst?
+
+Ha det bra!
+[Christian/Saga]
+
+---
+
+## MALL 3: Till personer som byter karriar
+
+---
+
+Hej [Namn]!
+
+Jag sag att du ar pa vag in i en ny karriar - spannande!
+
+Nar man byter bransch ar det sarskilt viktigt att CVt ar optimalt formulerat och innehaller ratt nyckelord for den nya branschen.
+
+Jag hjalper dig att:
+Identifiera vilka nyckelord som efterfragas i din nya bransch
+Formulera om din erfarenhet sa den blir relevant
+Optimera for ATS-system
+
+Pris: 299 kr for full optimering
+
+Intresserad av att hora mer?
+
+Med vanliga halsningar
+[Christian/Saga]
+
+---
+
+## MALL 4: Uppfoljning (om de inte svarat pa forsta)
+
+---
+
+Hej [Namn]!
+
+Jag skickade ett meddelande for nagra dagar sedan om CV-optimering.
+
+Jag forstar om du har fullt upp med ansokningar. Tankte bara hora ifall det finns nagot jag kan hjalpa dig med?
+
+Just nu har jag ett introduktionserbjudande: 50% rabatt pa komplett paket (CV + Personligt Brev + LinkedIn) for 499 kr.
+
+Intresserad?
+
+Ha en fin dag!
+[Christian/Saga]
+
+---
+
+## MALL 5: Efter att de visat intresse
+
+---
+
+Hej [Namn]!
+
+Roligt att du ar intresserad!
+
+Sa har gar det till:
+
+1. Du skickar ditt nuvarande CV (PDF eller Word)
+2. Jag kor en analys och optimerar det med AI (tar ca 48h)
+3. Du far tillbaka ett optimerat CV + en detaljerad rapport
+4. Om du vill ha justeringar sa ingar 1 revidering
+
+Betalning sker via Stripe (sakra kortbetalningar) eller Swish.
+
+Pris: 299 kr for CV-optimering / 499 kr for komplett paket
+
+Kan du skicka CVt till [email] sa kör vi igang?
+
+Basta halsningar
+[Christian/Saga]
+
+---
+
+## MALL 6: Kall kontakt (personer i ditt natverk)
+
+---
+
+Hej [Namn]!
+
+Langre sedan vi pratades - hoppas allt ar bra med dig!
+
+Jag har startat en ny tjanst dar jag hjalper jobbsokande att optimera sina CV med AI. Tankte att du kanske kanner nagon i ditt natverk som skulle kunna ha nytta av det?
+
+Det handlar om att optimera CVn sa de gar igenom ATS-filtren (som 85% av foretag anvander). 94% av kunderna rapporterar att de far fler intervjuer efterat.
+
+Pris: 299 kr (introduktionspris)
+
+Om du kanner nagon, far du garna dela eller koppla ihop oss!
+
+Ha det bra!
+[Christian/Saga]
+
+---
+
+## MALL 7: Erbjudande om gratis analys
+
+---
+
+Hej [Namn]!
+
+Jag erbjuder just nu en gratis CV-analys (vardera 299 kr) for att bygga upp min portfolio.
+
+Jag analyserar ditt nuvarande CV och ger dig:
+En detaljerad rapport om vad som kan forbattras
+Specifika tips for din bransch
+En bedomning av hur val det klarar ATS-filtren
+
+Det tar 5 minuter for dig att skicka CVt, och du far analysen inom 24h.
+
+Intresserad?
+
+Ha en fin dag!
+[Christian/Saga]
+
+---
+
+## CHECKLISTA FOR DM-UTSKICK
+
+- [ ] Sok efter personer med "Open to Work"-badge
+- [ ] Filtrera pa din ort (Stockholm, Goteborg, Malmo, etc.)
+- [ ] Fokusera pa nyexaminerade eller personer som byter karriar
+- [ ] Skicka 10-20 DM per dag
+- [ ] Personifiera varje meddelande med namn
+- [ ] Följ upp efter 3 dagar om ingen respons
+- [ ] Hall koll pa vilka du kontaktat i ett kalkylblad
+
+MAL: 5 intresserade leads per dag
+KONVERTERING: 1-2 kunder per 20 DM (realistiskt)
