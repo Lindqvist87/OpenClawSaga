@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "prompt-guard": {
+      "version": "2.6.1",
+      "installedAt": 1770220257425
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1770220266287
+    },
+    "dont-hack-me": {
+      "version": "1.0.1",
+      "installedAt": 1770220270785
+    }
+  }
+}
