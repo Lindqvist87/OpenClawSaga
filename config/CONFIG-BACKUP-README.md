@@ -43,12 +43,19 @@ config/openclaw-config-TEMPLATE.json
 
 ## 📝 API-nycklar som behövs
 
-| Tjänst | Nyckeltyp | Kostnad |
-|--------|-----------|---------|
-| **NVIDIA** | Gratis | $0 |
-| **OpenAI** | Betald | Per användning |
-| **Brave Search** | Gratis (till 2000/år) | $0 |
-| **Telegram** | Gratis | $0 |
+| Tjänst | Nyckeltyp | Kostnad | Status |
+|--------|-----------|---------|--------|
+| **NVIDIA** | Gratis | $0 | ✅ Fungerar |
+| **OpenAI** | Betald | Per användning | ✅ Fungerar |
+| **xAI** | Betald | Per användning | ✅ Fungerar |
+| **Gemini** | Gratis/Betald | $0 (för närvarande) | ⚠️ Experimentell |
+| **Brave Search** | Gratis (till 2000/år) | $0 | ✅ Fungerar |
+
+### Viktigt om Gemini
+- API-nyckel från AIStudio
+- Har haft tillförlitlighetsproblem tidigare
+- Används som backup/experimentell modell
+- Gratis för närvarande
 
 ---
 
