@@ -43,7 +43,7 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class Trade:
-    """Represents a single trade"""
+    """Represents a single trade - SCALPING OPTIMIZED"""
     id: int = 0
     symbol: str = ""
     side: str = ""  # BUY or SELL
@@ -58,6 +58,7 @@ class Trade:
     strategy: str = ""
     stop_loss: float = 0.0
     take_profit: float = 0.0
+    exit_reason: str = ""  # New: track why trade closed
     
     def to_dict(self) -> Dict:
         return asdict(self)
@@ -428,7 +429,7 @@ class SignalGenerator:
         }
     
     def generate_signal(self, candles: List[Dict], symbol: str = "") -> Signal:
-        """Generate trading signal with comprehensive indicator analysis"""
+        """Generate trading signal with comprehensive indicator analysis - SCALPING OPTIMIZED"""
         signal = Signal(symbol=symbol, timestamp=datetime.now().isoformat())
         
         if len(candles) < 50:
@@ -441,6 +442,17 @@ class SignalGenerator:
         volumes = [c['volume'] for c in candles]
         
         current_price = closes[-1]
+        current_volume = volumes[-1]
+        
+        # VOLUME FILTER: Skip if volume too low (scalping requires liquidity)
+        avg_volume = sum(volumes[-20:]) / 20
+        volume_ratio = current_volume / avg_volume if avg_volume > 0 else 0
+        min_volume_ratio = 0.5  # Must have at least 50% of average volume
+        
+        if volume_ratio < min_volume_ratio:
+            signal.reason = f'Volume too low ({volume_ratio:.2f}x avg) - insufficient liquidity for scalping'
+            signal.indicators = {'volume_ratio': volume_ratio, 'min_required': min_volume_ratio}
+            return signal
         
         # Calculate all indicators
         sma_10 = self.indicators.calculate_sma(closes, 10)
@@ -459,6 +471,9 @@ class SignalGenerator:
         # Store indicators in signal
         signal.indicators = {
             'price': current_price,
+            'volume_ratio': volume_ratio,
+            'avg_volume': avg_volume,
+            'current_volume': current_volume,
             'sma_10': sma_10,
             'sma_20': sma_20,
             'sma_50': sma_50,
@@ -470,7 +485,7 @@ class SignalGenerator:
             'stochastic': stochastic,
             'atr': atr,
             'volume_spike': volume_spike,
-            'volume_ratio': volume_ratio,
+            'volume_ratio_detail': volume_ratio,
             'trend': trend
         }
         
@@ -547,11 +562,11 @@ class SignalGenerator:
         buy_confidence = buy_score / total_weight
         sell_confidence = sell_score / total_weight
         
-        if buy_confidence >= 0.6 and buy_confidence > sell_confidence:
+        if buy_confidence >= 0.5 and buy_confidence > sell_confidence:  # Reduced from 0.6 for more signals
             signal.signal = 'BUY'
             signal.confidence = min(buy_confidence, 1.0)
             signal.reason = ' | '.join(reasons[:3]) if reasons else 'Multiple bullish indicators'
-        elif sell_confidence >= 0.6 and sell_confidence > buy_confidence:
+        elif sell_confidence >= 0.5 and sell_confidence > buy_confidence:  # Reduced from 0.6 for more signals
             signal.signal = 'SELL'
             signal.confidence = min(sell_confidence, 1.0)
             signal.reason = ' | '.join(reasons[:3]) if reasons else 'Multiple bearish indicators'
@@ -583,19 +598,35 @@ class SignalGenerator:
 
 
 class RiskManager:
-    """Enhanced risk management with dynamic position sizing"""
+    """Enhanced risk management with dynamic position sizing - SCALPING OPTIMIZED"""
     
     def __init__(self, 
                  max_daily_loss_pct: float = 3.0,
-                 max_position_pct: float = 5.0,
-                 max_trades_per_day: int = 10,
-                 atr_multiplier_sl: float = 2.0,
-                 risk_reward_ratio: float = 2.0):
+                 max_position_pct: float = 3.0,  # Reduced for scalping
+                 max_trades_per_day: int = 25,  # Increased for scalping
+                 atr_multiplier_sl: float = 1.0,  # Tighter for scalping (was 2.0)
+                 risk_reward_ratio: float = 2.0,
+                 use_fixed_sl_tp: bool = True,  # New: use fixed % SL/TP
+                 fixed_sl_pct: float = 0.3,  # 0.3% stop loss
+                 fixed_tp_pct: float = 0.6,  # 0.6% take profit (1:2 RR)
+                 max_trade_duration_minutes: int = 10,  # Time-based exit
+                 use_trailing_stop: bool = True,
+                 trailing_stop_activation_pct: float = 0.4,  # Activate at 0.4% profit
+                 trailing_stop_distance_pct: float = 0.2):
         self.max_daily_loss_pct = max_daily_loss_pct
         self.max_position_pct = max_position_pct
         self.max_trades_per_day = max_trades_per_day
         self.atr_multiplier_sl = atr_multiplier_sl
         self.risk_reward_ratio = risk_reward_ratio
+        
+        # Scalping-specific settings
+        self.use_fixed_sl_tp = use_fixed_sl_tp
+        self.fixed_sl_pct = fixed_sl_pct
+        self.fixed_tp_pct = fixed_tp_pct
+        self.max_trade_duration_minutes = max_trade_duration_minutes
+        self.use_trailing_stop = use_trailing_stop
+        self.trailing_stop_activation_pct = trailing_stop_activation_pct
+        self.trailing_stop_distance_pct = trailing_stop_distance_pct
         
         self.daily_stats = {
             'loss': 0.0,
@@ -655,8 +686,11 @@ class RiskManager:
         return round(quantity, 6), adjusted_position_pct
     
     def calculate_stop_loss(self, entry_price: float, side: str, atr: Optional[float] = None) -> float:
-        """Calculate stop loss price using ATR-based dynamic stops"""
-        if atr:
+        """Calculate stop loss price - SCALPING OPTIMIZED"""
+        if self.use_fixed_sl_tp:
+            # Use fixed percentage for scalping
+            stop_distance = entry_price * (self.fixed_sl_pct / 100)
+        elif atr:
             stop_distance = atr * self.atr_multiplier_sl
         else:
             stop_distance = entry_price * 0.01  # Default 1%
@@ -667,14 +701,18 @@ class RiskManager:
             return entry_price + stop_distance
     
     def calculate_take_profit(self, entry_price: float, side: str, stop_loss: float) -> float:
-        """Calculate take profit based on risk:reward ratio"""
-        risk_distance = abs(entry_price - stop_loss)
-        reward_distance = risk_distance * self.risk_reward_ratio
+        """Calculate take profit based on risk:reward ratio - SCALPING OPTIMIZED"""
+        if self.use_fixed_sl_tp:
+            # Use fixed percentage for scalping
+            tp_distance = entry_price * (self.fixed_tp_pct / 100)
+        else:
+            risk_distance = abs(entry_price - stop_loss)
+            tp_distance = risk_distance * self.risk_reward_ratio
         
         if side == 'BUY':
-            return entry_price + reward_distance
+            return entry_price + tp_distance
         else:
-            return entry_price - reward_distance
+            return entry_price - tp_distance
     
     def update_after_trade(self, trade_pnl: float, portfolio_value: float):
         """Update risk metrics after a trade closes"""
@@ -752,7 +790,8 @@ class PaperTrader:
                 status TEXT,
                 strategy TEXT,
                 stop_loss REAL,
-                take_profit REAL
+                take_profit REAL,
+                exit_reason TEXT
             )
         ''')
         
@@ -820,6 +859,7 @@ class PaperTrader:
         trade.exit_price = exit_price
         trade.exit_time = datetime.now().isoformat()
         trade.status = "CLOSED"
+        trade.exit_reason = reason  # Store the exit reason
         
         # Calculate P&L
         if trade.side == 'BUY':
@@ -846,7 +886,7 @@ class PaperTrader:
         if current_equity > self.peak_balance:
             self.peak_balance = current_equity
         
-        logger.info(f"CLOSED trade #{trade_id}: P&L = ${trade.profit_loss:.2f} ({trade.profit_loss_pct:.2f}%) [{reason}]")
+        logger.info(f"✓ CLOSED trade #{trade_id}: P&L = ${trade.profit_loss:.2f} ({trade.profit_loss_pct:+.2f}%) | Reason: {reason}")
         
         self.update_trade(trade)
         self.record_performance()
@@ -859,12 +899,12 @@ class PaperTrader:
         cursor = conn.cursor()
         
         cursor.execute('''
-            INSERT INTO trades VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO trades VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
             trade.id, trade.symbol, trade.side, trade.entry_price, trade.exit_price,
             trade.quantity, trade.profit_loss, trade.profit_loss_pct,
             trade.entry_time, trade.exit_time, trade.status, trade.strategy,
-            trade.stop_loss, trade.take_profit
+            trade.stop_loss, trade.take_profit, trade.exit_reason
         ))
         
         conn.commit()
@@ -876,9 +916,9 @@ class PaperTrader:
         cursor = conn.cursor()
         
         cursor.execute('''
-            UPDATE trades SET exit_price=?, exit_time=?, status=?, profit_loss=?, profit_loss_pct=?
+            UPDATE trades SET exit_price=?, exit_time=?, status=?, profit_loss=?, profit_loss_pct=?, exit_reason=?
             WHERE id=?
-        ''', (trade.exit_price, trade.exit_time, trade.status, trade.profit_loss, trade.profit_loss_pct, trade.id))
+        ''', (trade.exit_price, trade.exit_time, trade.status, trade.profit_loss, trade.profit_loss_pct, trade.exit_reason, trade.id))
         
         conn.commit()
         conn.close()
@@ -1306,18 +1346,34 @@ class DashboardServer:
 
 
 class MicroScalpBot:
-    """Enhanced main trading bot"""
+    """Enhanced main trading bot - SCALPING OPTIMIZED"""
     
     def __init__(self, symbols: List[str] = None, enable_dashboard: bool = True):
         self.symbols = symbols or ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
         self.price_monitor = PriceMonitor()
         self.signal_generator = SignalGenerator()
-        self.risk_manager = RiskManager()
+        
+        # Initialize RiskManager with SCALPING-OPTIMIZED settings
+        self.risk_manager = RiskManager(
+            max_daily_loss_pct=3.0,
+            max_position_pct=3.0,      # Reduced for scalping
+            max_trades_per_day=25,      # Increased for scalping
+            atr_multiplier_sl=1.0,      # Tighter stops
+            risk_reward_ratio=2.0,
+            use_fixed_sl_tp=True,       # Use fixed % SL/TP
+            fixed_sl_pct=0.3,           # 0.3% stop loss
+            fixed_tp_pct=0.6,           # 0.6% take profit
+            max_trade_duration_minutes=10,  # Time-based exit
+            use_trailing_stop=True,
+            trailing_stop_activation_pct=0.4,
+            trailing_stop_distance_pct=0.2
+        )
+        
         self.trader = PaperTrader(initial_balance=10000.0)
         self.backtester = Backtester(self.signal_generator, self.risk_manager)
         
         self.running = False
-        self.check_interval = 60
+        self.check_interval = 30  # Reduced to 30 seconds for scalping
         self.dashboard = None
         self.enable_dashboard = enable_dashboard
         
@@ -1326,8 +1382,9 @@ class MicroScalpBot:
         self.start_time = None
     
     def check_open_trades(self):
-        """Check if any open trades should be closed"""
+        """Check if any open trades should be closed - SCALPING OPTIMIZED"""
         current_prices = {}
+        current_time = datetime.now()
         
         for trade in self.trader.open_trades[:]:
             # Get current price
@@ -1340,10 +1397,59 @@ class MicroScalpBot:
             if not current_price:
                 continue
             
-            # Check stop loss and take profit
+            # Calculate current P&L
             if trade.side == 'BUY':
-                if current_price <= trade.stop_loss:
-                    logger.info(f"STOP LOSS triggered for {trade.symbol}")
+                current_pnl_pct = ((current_price - trade.entry_price) / trade.entry_price) * 100
+            else:
+                current_pnl_pct = ((trade.entry_price - current_price) / trade.entry_price) * 100
+            
+            exit_reason = None
+            
+            # 1. Check stop loss
+            if trade.side == 'BUY' and current_price <= trade.stop_loss:
+                exit_reason = f"STOP_LOSS (Price: ${current_price:.2f} <= SL: ${trade.stop_loss:.2f})"
+            elif trade.side == 'SELL' and current_price >= trade.stop_loss:
+                exit_reason = f"STOP_LOSS (Price: ${current_price:.2f} >= SL: ${trade.stop_loss:.2f})"
+            
+            # 2. Check take profit
+            elif trade.side == 'BUY' and current_price >= trade.take_profit:
+                exit_reason = f"TAKE_PROFIT (Price: ${current_price:.2f} >= TP: ${trade.take_profit:.2f})"
+            elif trade.side == 'SELL' and current_price <= trade.take_profit:
+                exit_reason = f"TAKE_PROFIT (Price: ${current_price:.2f} <= TP: ${trade.take_profit:.2f})"
+            
+            # 3. Time-based exit (scalping optimization)
+            elif self.risk_manager.max_trade_duration_minutes > 0:
+                entry_time = datetime.fromisoformat(trade.entry_time.replace('Z', '+00:00').replace('+00:00', ''))
+                trade_duration = (current_time - entry_time).total_seconds() / 60
+                
+                if trade_duration > self.risk_manager.max_trade_duration_minutes:
+                    # Exit if not in profit after max duration
+                    if current_pnl_pct < 0.1:  # Less than 0.1% profit
+                        exit_reason = f"TIME_EXIT (Duration: {trade_duration:.1f}min, P&L: {current_pnl_pct:.2f}%)"
+            
+            # 4. Trailing stop (activate after profit threshold)
+            elif self.risk_manager.use_trailing_stop and current_pnl_pct >= self.risk_manager.trailing_stop_activation_pct:
+                # Calculate trailing stop level
+                if trade.side == 'BUY':
+                    trailing_stop = current_price * (1 - self.risk_manager.trailing_stop_distance_pct / 100)
+                    if trailing_stop > trade.stop_loss:  # Only move stop up
+                        trade.stop_loss = trailing_stop
+                        logger.info(f"TRAILING STOP updated for {trade.symbol}: ${trade.stop_loss:.2f}")
+                else:
+                    trailing_stop = current_price * (1 + self.risk_manager.trailing_stop_distance_pct / 100)
+                    if trailing_stop < trade.stop_loss:  # Only move stop down
+                        trade.stop_loss = trailing_stop
+                        logger.info(f"TRAILING STOP updated for {trade.symbol}: ${trade.stop_loss:.2f}")
+            
+            # Log SL/TP check every cycle for debugging
+            logger.debug(f"Trade #{trade.id} {trade.symbol}: Price=${current_price:.2f}, SL=${trade.stop_loss:.2f}, TP=${trade.take_profit:.2f}, P&L={current_pnl_pct:+.2f}%")
+            
+            # Execute exit if reason found
+            if exit_reason:
+                closed_trade = self.trader.close_trade(trade.id, current_price, exit_reason)
+                if closed_trade:
+                    self.risk_manager.update_after_trade(closed_trade.profit_loss, self.trader.get_equity())
+                    logger.info(f"✓ Trade #{trade.id} closed: {exit_reason}, Final P&L: ${closed_trade.profit_loss:.2f}")
                     closed_trade = self.trader.close_trade(trade.id, current_price, "stop_loss")
                     if closed_trade:
                         self.risk_manager.update_after_trade(closed_trade.profit_loss, self.trader.get_equity())

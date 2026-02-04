@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-02-04T21:07:00+01:00",
+  "collection_type": "realtime_data",
+  "prices": {
+    "BTC": {
+      "price_usd": 76350,
+      "trend": "down",
+      "note": "Dropped to 9-month low below $78k - market volatility increase",
+      "source": "latestly.com"
+    },
+    "ETH": {
+      "price_usd": null,
+      "trend": "unknown",
+      "note": "Data pending - rate limited"
+    },
+    "SOL": {
+      "price_usd": 93.38,
+      "price_range": "93.38-100.81",
+      "trend": "stable",
+      "volume_24h": "$7.2B",
+      "source": "coinmarketcap.com"
+    }
+  },
+  "market_sentiment": {
+    "overall": "risk-averse",
+    "indicator": "Bitcoin dip indicates retail and institutional traders in risk-off mode",
+    "volatility": "high"
+  },
+  "social_trends": {
+    "linkedin_2026": {
+      "key_trend": "Strategic commenting on high-visibility posts BEFORE posting",
+      "algorithm_focus": "Meaningful conversation over broadcast-style posting",
+      "creative_era": true,
+      "attention_economy": "Attention is the most valuable and scarcest commodity"
+    },
+    "youtube_2026": {
+      "key_trend": "Quality over quantity - small channels can explode",
+      "algorithm": "Rewards current value, not accumulated metrics",
+      "shorts": "200+ billion views daily, 5.91% engagement (higher than TikTok)"
+    }
+  },
+  "collected_by": "Saga Trading Bot",
+  "next_collection": "2026-02-04T21:37:00+01:00"
+}

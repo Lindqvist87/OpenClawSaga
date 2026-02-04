@@ -547,7 +547,7 @@ class MicroScalpBot:
         stats = self.trader.get_stats()
         
         print("\n" + "="*60)
-        print(f"🤖 MICRO-SCALP BOT STATUS")
+        print(f"[BOT] MICRO-SCALP BOT STATUS")
         print("="*60)
         print(f"Balance: ${stats['balance']:.2f}")
         print(f"Open Trades: {stats['open_trades']}")
@@ -558,7 +558,7 @@ class MicroScalpBot:
         print("="*60)
         
         if self.trader.open_trades:
-            print("\n📊 OPEN TRADES:")
+            print("\n[DATA] OPEN TRADES:")
             for trade in self.trader.open_trades:
                 current_price = self.price_monitor.get_price(trade.symbol)
                 if current_price:
@@ -570,7 +570,7 @@ class MicroScalpBot:
     
     def run(self):
         """Main bot loop"""
-        logger.info("🚀 Starting Micro-Scalp Bot (PAPER TRADING MODE)")
+        logger.info("[START] Starting Micro-Scalp Bot (PAPER TRADING MODE)")
         logger.info(f"Symbols: {self.symbols}")
         logger.info(f"Initial Balance: ${self.trader.initial_balance:.2f}")
         
@@ -595,7 +595,7 @@ class MicroScalpBot:
             logger.info("🛑 Bot stopped by user")
             self.running = False
         except Exception as e:
-            logger.error(f"❌ Bot error: {e}")
+            logger.error(f"[ERROR] Bot error: {e}")
             self.running = False
 
 

@@ -27,3 +27,18 @@ Stats:
 
 Next check: 21:06 CET
 ============================================================
+2026-02-04 21:12:43,984 - __main__ - INFO - Symbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
+2026-02-04 21:12:43,986 - __main__ - INFO - Initial Balance: $1000.00
+2026-02-04 21:12:45,864 - __main__ - INFO - BUY signal for ETHUSDT: Uptrend confirmed (confidence: 0.6)
+2026-02-04 21:12:45,864 - __main__ - INFO - OPENED BUY trade: ETHUSDT @ $2167.63 x 0.009227
+2026-02-04 21:12:47,263 - __main__ - INFO - BUY signal for SOLUSDT: Uptrend confirmed (confidence: 0.6)
+2026-02-04 21:12:47,263 - __main__ - INFO - OPENED BUY trade: SOLUSDT @ $93.59 x 0.213698
+2026-02-04 21:17:18,150 - __main__ - INFO - Symbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
+2026-02-04 21:17:18,150 - __main__ - INFO - Initial Balance: $1000.00
+2026-02-04 21:17:19,014 - __main__ - INFO - BUY signal for BTCUSDT: Uptrend confirmed (confidence: 0.6)
+2026-02-04 21:17:19,014 - __main__ - INFO - OPENED BUY trade: BTCUSDT @ $73658.00 x 0.000272
+2026-02-04 21:20:25,680 - __main__ - INFO - [START] Starting Micro-Scalp Bot (PAPER TRADING MODE)
+2026-02-04 21:20:25,680 - __main__ - INFO - Symbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
+2026-02-04 21:20:25,681 - __main__ - INFO - Initial Balance: $1000.00
+2026-02-04 21:20:26,411 - __main__ - INFO - BUY signal for BTCUSDT: Uptrend confirmed (confidence: 0.6)
+2026-02-04 21:20:26,412 - __main__ - INFO - OPENED BUY trade: BTCUSDT @ $73797.20 x 0.000271

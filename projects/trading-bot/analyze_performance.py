@@ -1,82 +1,62 @@
-#!/usr/bin/env python3
-"""Analyze trading performance for last 6 hours"""
 import sqlite3
 from datetime import datetime, timedelta
 
 conn = sqlite3.connect('paper_trades.db')
 cursor = conn.cursor()
 
-# Get trades from last 6 hours
+# Get last 6 hours timestamp
 six_hours_ago = (datetime.now() - timedelta(hours=6)).isoformat()
 
+# Query all trades in last 6h
 cursor.execute('''
-    SELECT 
-        COUNT(*) as total_trades,
-        SUM(CASE WHEN profit_loss > 0 THEN 1 ELSE 0 END) as wins,
-        SUM(CASE WHEN profit_loss <= 0 THEN 1 ELSE 0 END) as losses,
-        SUM(profit_loss) as total_pnl,
-        AVG(profit_loss_pct) as avg_pnl_pct
-    FROM trades 
-    WHERE status = 'CLOSED' AND exit_time >= ?
+    SELECT * FROM trades 
+    WHERE entry_time >= ? 
+    ORDER BY entry_time DESC
 ''', (six_hours_ago,))
 
-result = cursor.fetchone()
-total_trades = result[0] or 0
-wins = result[1] or 0
-losses = result[2] or 0
-total_pnl = result[3] or 0
-avg_pnl_pct = result[4] or 0
+trades = cursor.fetchall()
+print('=== TRADES IN LAST 6 HOURS ===')
+print(f'Total trades: {len(trades)}')
 
-win_rate = (wins / total_trades * 100) if total_trades > 0 else 0
+closed_trades = [t for t in trades if t[10] == 'CLOSED']
+open_trades = [t for t in trades if t[10] == 'OPEN']
 
-print(f"=== 6-HOUR PERFORMANCE ANALYSIS ===")
-print(f"Total Trades (6h): {total_trades}")
-print(f"Wins: {wins}")
-print(f"Losses: {losses}")
-print(f"Win Rate: {win_rate:.1f}%")
-print(f"Total P&L: ${total_pnl:.2f}")
-print(f"Avg P&L %: {avg_pnl_pct:.2f}%")
+print(f'Closed trades: {len(closed_trades)}')
+print(f'Open trades: {len(open_trades)}')
 
-# Check for consecutive losses
-cursor.execute('''
-    SELECT profit_loss > 0 as is_win
-    FROM trades 
-    WHERE status = 'CLOSED' 
-    ORDER BY exit_time DESC
-    LIMIT 10
-''')
-recent = cursor.fetchall()
-consecutive_losses = 0
-for row in recent:
-    if row[0] == 0:  # Loss
-        consecutive_losses += 1
-    else:
-        break
-print(f"Consecutive Losses: {consecutive_losses}")
-
-# Determine if optimization needed
-print("\n=== OPTIMIZATION CHECK ===")
-needs_optimization = False
-reasons = []
-
-if total_trades >= 3 and win_rate < 50:
-    needs_optimization = True
-    reasons.append(f"Win rate {win_rate:.1f}% < 50%")
-
-if consecutive_losses >= 3:
-    needs_optimization = True
-    reasons.append(f"{consecutive_losses} consecutive losses")
-
-if total_pnl < -50:
-    needs_optimization = True
-    reasons.append(f"P&L ${total_pnl:.2f} < -$50")
-
-if needs_optimization:
-    print("STATUS: OPTIMIZATION REQUIRED")
-    for r in reasons:
-        print(f"  - {r}")
+if closed_trades:
+    wins = [t for t in closed_trades if t[6] > 0]
+    losses = [t for t in closed_trades if t[6] <= 0]
+    total_pnl = sum(t[6] for t in closed_trades)
+    win_rate = len(wins) / len(closed_trades) * 100
+    
+    print(f'\nWinning trades: {len(wins)}')
+    print(f'Losing trades: {len(losses)}')
+    print(f'Win rate: {win_rate:.1f}%')
+    print(f'Total P&L: ${total_pnl:.2f}')
+    
+    # Check for consecutive losses
+    cursor.execute('''
+        SELECT profit_loss FROM trades 
+        WHERE status = 'CLOSED' AND entry_time >= ?
+        ORDER BY exit_time DESC
+    ''', (six_hours_ago,))
+    
+    pnl_list = [r[0] for r in cursor.fetchall()]
+    consecutive_losses = 0
+    for pnl in pnl_list:
+        if pnl <= 0:
+            consecutive_losses += 1
+        else:
+            break
+    print(f'Consecutive losses: {consecutive_losses}')
 else:
-    print("STATUS: NO OPTIMIZATION NEEDED")
-    print("  - All metrics within acceptable thresholds")
+    print('\nNo closed trades to analyze')
+
+# Show open trades
+if open_trades:
+    print('\n=== OPEN TRADES ===')
+    for t in open_trades:
+        print(f"ID {t[0]}: {t[1]} {t[2]} @ ${t[3]:.2f} - Opened: {t[8]}")
 
 conn.close()

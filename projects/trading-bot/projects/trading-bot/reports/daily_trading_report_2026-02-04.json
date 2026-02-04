@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-02-04T21:11:46.924829",
+  "prices": {
+    "BTCUSDT": 73624.62,
+    "ETHUSDT": 2170.54,
+    "SOLUSDT": 93.6
+  },
+  "signals": {
+    "BTCUSDT": {
+      "signal": "HOLD",
+      "confidence": 0.0,
+      "current_price": 73609.06,
+      "sma_10": 73613.73300000001,
+      "sma_20": 73630.3025,
+      "volume_spike": false
+    },
+    "ETHUSDT": {
+      "signal": "BUY",
+      "confidence": 0.6,
+      "current_price": 2169.79,
+      "sma_10": 2161.662,
+      "sma_20": 2157.9134999999997,
+      "volume_spike": false
+    },
+    "SOLUSDT": {
+      "signal": "BUY",
+      "confidence": 0.6,
+      "current_price": 93.58,
+      "sma_10": 93.90700000000001,
+      "sma_20": 93.532,
+      "volume_spike": false
+    }
+  },
+  "open_trades_count": 1,
+  "closed_trades": [],
+  "stats": {
+    "total_closed": 0,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "open_trades": 1
+  }
+}
