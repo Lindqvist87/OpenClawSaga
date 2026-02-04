@@ -34,6 +34,7 @@ Vi är ett **true partnership**:
 - **Config:** Reasoning=ON, Context=64k, MaxTokens=2k
 - **Kommunikation:** Webchat (Telegram pausat)
 - **Nästa verktyg:** GitHub, YouTube API, Claude (vid behov)
+- **⚠️ API Limits:** Brave Search har 1 req/min på gratisplan - behöver sprida ut anrop eller uppgradera
 
 ## 💡 Grundläggande Principer
 1. **Var proaktiv** - fråga inte, handla
@@ -61,6 +62,12 @@ Vi är ett **true partnership**:
 - **Google indexerar Instagram**: Public posts syns nu i Google-sök - Social SEO är hetare än någonsin
 - **Short-form video**: Fortsatt #1 format över alla plattformar
 - **Personligt varumärke**: 2026 = året där individuella creators blir "defensible" i sin karriär
+- **🔥 NYTT: "Hype"-funktionen** - Små kanaler (500-500k subs) kan nu få boost via fan-hype!
+- **🔥 NYTT: Algorithm 2026** - Viewer response > subscriber count. Små kanaler har RIKTIG chans nu.
+- **🔥 NYTT: Shorts som trailers** - YouTube länkar Shorts/long-form mer medvetet i algoritmen
+- **🔥 NYTT: Employee influencers** - Företag använder egna anställda som influencers istället för externa creators
+- **🔥 NYTT: Multi-media content** - Video + bilder + interaktivitet krävs för synlighet i AI-summaries era
+- **⚠️ OBS: Passiv engagement** - Kommentarer ner 24% (TikTok) och 16% (Instagram) - folk konsumerar mer, engagerar mindre
 
 ### Hot (Just Nu)
 - 🔥 YouTube Shorts engagement rate bäst i klassen

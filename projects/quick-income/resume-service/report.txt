@@ -1,0 +1,79 @@
+
+============================================================
+   RESUME OPTIMIZATION REPORT v2.0.0
+============================================================
+
+FILE INFORMATION
+   Path: sample_resume.txt
+   Format: txt
+   Size: 1,067 bytes
+   Analyzed: 2026-02-04T16:22:16.661118
+
+LANGUAGE
+   Detected: English
+
+ATS COMPATIBILITY SCORE: 75/100 [PASS]
+   
+   Score Breakdown:
+   - Contact Information: 15/15
+   - Resume Structure:    20/20
+   - Content Quality:     7/20
+   - Keyword Matching:    20/20
+   - Formatting:          8/10
+   - Readability:         5/15
+
+BASIC METRICS
+   Word Count:   147
+   Characters:   1,049
+   Lines:        33
+   Sections:     5
+   Bullets:      21
+
+CONTENT CHECKLIST
+   [X] Contact Information (Email + Phone)
+   [X] Email Address
+   [X] Phone Number
+   [X] LinkedIn URL
+   [X] Professional Summary
+   [X] Experience Section
+   [X] Education Section
+   [X] Skills Section
+
+QUALITY METRICS
+   Power Verbs Used:        3
+   Power Verb Variety:      3 unique
+   Quantified Achievements: 2
+   Bullet Quality Score:    40.7%
+   Action-Oriented Bullets: 33.3%
+
+INDUSTRY KEYWORDS
+   Detected Industry: TECH
+   Coverage: 52.4%
+   
+   Keywords Found (11):
+   - aws: 2x
+   - react: 2x
+   - node.js: 2x
+   - agile: 2x
+   - python: 1x
+   - javascript: 1x
+   - api: 1x
+   - git: 1x
+   - docker: 1x
+   - scrum: 1x
+   - ci/cd: 1x
+
+   Missing Keywords (top 5): java, sql, kubernetes, devops, microservices
+
+WARNINGS
+   [WARN] ⚠️ Weak phrases detected: responsible for, duties included, worked on. Replace with stronger language.
+
+IMPROVEMENT SUGGESTIONS
+   [TIP] 💡 Vary your action verbs. Try: achieved, trained, managed, created
+   [TIP] 💡 Improve bullet quality: Start with action verbs, include metrics, keep 50-150 chars.
+   [TIP] 💡 More bullets should start with action verbs. Revise passive statements.
+   [TIP] 💡 Expand your resume with more specific achievements and responsibilities.
+
+============================================================
+   END OF REPORT
+============================================================

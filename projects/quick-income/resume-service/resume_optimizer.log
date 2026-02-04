@@ -1,0 +1,189 @@
+2026-02-04 16:20:31,035 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:20:31,037 - resume_optimizer - INFO - Reading file: C:\Users\Hejhej\AppData\Local\Temp\tmp5to82vcu.txt
+2026-02-04 16:21:09,500 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:21:09,500 - resume_optimizer - INFO - Reading file: C:\Users\Hejhej\AppData\Local\Temp\tmpd01zdu7h.txt
+2026-02-04 16:21:09,500 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:21:09,545 - resume_optimizer - INFO - Reading file: C:\Users\Hejhej\AppData\Local\Temp\tmpgtohnixz.txt
+2026-02-04 16:21:09,547 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:21:09,548 - resume_optimizer - INFO - Reading file: \nonexistent\path\resume.txt
+2026-02-04 16:21:09,548 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:21:09,549 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:21:09,550 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:21:09,550 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:21:09,551 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: sv)
+2026-02-04 16:21:09,551 - resume_optimizer - INFO - Starting resume analysis
+2026-02-04 16:21:09,551 - resume_optimizer - INFO - Text stats: 45 words, 433 chars
+2026-02-04 16:21:09,559 - resume_optimizer - INFO - Analysis complete. ATS Score: 31
+2026-02-04 16:21:09,559 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:21:09,560 - resume_optimizer - INFO - Reading file: C:\Users\Hejhej\AppData\Local\Temp\tmpx49i1q0e.txt
+2026-02-04 16:21:09,560 - resume_optimizer - INFO - Detected format: txt
+2026-02-04 16:21:09,561 - resume_optimizer - INFO - Reading text file: C:\Users\Hejhej\AppData\Local\Temp\tmpx49i1q0e.txt
+2026-02-04 16:21:09,620 - resume_optimizer - INFO - Starting resume analysis
+2026-02-04 16:21:09,620 - resume_optimizer - INFO - Text stats: 147 words, 1049 chars
+2026-02-04 16:21:09,638 - resume_optimizer - INFO - Analysis complete. ATS Score: 75
+2026-02-04 16:21:50,339 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:21:50,340 - __main__ - INFO - Reading file: sample_resume.txt
+2026-02-04 16:21:50,340 - __main__ - INFO - Detected format: txt
+2026-02-04 16:21:50,340 - __main__ - INFO - Reading text file: sample_resume.txt
+2026-02-04 16:21:50,342 - __main__ - INFO - Auto-detected language: en
+2026-02-04 16:21:50,342 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:21:50,342 - __main__ - INFO - Text stats: 147 words, 1049 chars
+2026-02-04 16:21:50,362 - __main__ - INFO - Analysis complete. ATS Score: 75
+2026-02-04 16:21:50,365 - __main__ - ERROR - Unexpected error
+Traceback (most recent call last):
+  File "C:\Users\Hejhej\.openclaw\workspace\projects\quick-income\resume-service\resume_optimizer.py", line 1485, in main
+    print(report)
+  File "C:\Users\Hejhej\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4c4' in position 166: character maps to <undefined>
+2026-02-04 16:22:16,654 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:22:16,656 - __main__ - INFO - Reading file: sample_resume.txt
+2026-02-04 16:22:16,659 - __main__ - INFO - Detected format: txt
+2026-02-04 16:22:16,660 - __main__ - INFO - Reading text file: sample_resume.txt
+2026-02-04 16:22:16,661 - __main__ - INFO - Auto-detected language: en
+2026-02-04 16:22:16,661 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:22:16,661 - __main__ - INFO - Text stats: 147 words, 1049 chars
+2026-02-04 16:22:16,680 - __main__ - INFO - Analysis complete. ATS Score: 75
+2026-02-04 16:23:18,829 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:23:18,829 - __main__ - INFO - Reading file: sample_resume.txt
+2026-02-04 16:23:18,829 - __main__ - INFO - Detected format: txt
+2026-02-04 16:23:18,829 - __main__ - INFO - Reading text file: sample_resume.txt
+2026-02-04 16:23:18,830 - __main__ - INFO - Auto-detected language: en
+2026-02-04 16:23:18,830 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:23:18,830 - __main__ - INFO - Text stats: 147 words, 1049 chars
+2026-02-04 16:23:18,839 - __main__ - INFO - Analysis complete. ATS Score: 75
+2026-02-04 16:23:23,540 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:23:23,540 - __main__ - INFO - Reading file: sample_resume.txt
+2026-02-04 16:23:23,541 - __main__ - INFO - Detected format: txt
+2026-02-04 16:23:23,541 - __main__ - INFO - Reading text file: sample_resume.txt
+2026-02-04 16:23:23,541 - __main__ - INFO - Auto-detected language: en
+2026-02-04 16:23:23,541 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:23:23,542 - __main__ - INFO - Text stats: 147 words, 1049 chars
+2026-02-04 16:23:23,555 - __main__ - INFO - Analysis complete. ATS Score: 75
+2026-02-04 16:23:29,877 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:23:29,877 - __main__ - INFO - Reading file: sample_resume.txt
+2026-02-04 16:23:29,877 - __main__ - INFO - Detected format: txt
+2026-02-04 16:23:29,877 - __main__ - INFO - Reading text file: sample_resume.txt
+2026-02-04 16:23:29,878 - __main__ - INFO - Auto-detected language: en
+2026-02-04 16:23:29,878 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:23:29,878 - __main__ - INFO - Text stats: 147 words, 1049 chars
+2026-02-04 16:23:29,888 - __main__ - INFO - Analysis complete. ATS Score: 75
+2026-02-04 16:23:34,185 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:23:34,187 - resume_optimizer - INFO - Reading file: C:\Users\Hejhej\AppData\Local\Temp\tmpgjofgfrk.txt
+2026-02-04 16:23:34,189 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:23:34,204 - resume_optimizer - INFO - Reading file: C:\Users\Hejhej\AppData\Local\Temp\tmp5b2m9twg.txt
+2026-02-04 16:23:34,206 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:23:34,206 - resume_optimizer - INFO - Reading file: \nonexistent\path\resume.txt
+2026-02-04 16:23:34,206 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:23:34,208 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:23:34,208 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:23:34,208 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:23:34,209 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: sv)
+2026-02-04 16:23:34,209 - resume_optimizer - INFO - Starting resume analysis
+2026-02-04 16:23:34,209 - resume_optimizer - INFO - Text stats: 45 words, 433 chars
+2026-02-04 16:23:34,215 - resume_optimizer - INFO - Analysis complete. ATS Score: 31
+2026-02-04 16:23:34,215 - resume_optimizer - INFO - Initializing ResumeOptimizer v2.0.0 (lang: en)
+2026-02-04 16:23:34,216 - resume_optimizer - INFO - Reading file: C:\Users\Hejhej\AppData\Local\Temp\tmp1408hev9.txt
+2026-02-04 16:23:34,216 - resume_optimizer - INFO - Detected format: txt
+2026-02-04 16:23:34,216 - resume_optimizer - INFO - Reading text file: C:\Users\Hejhej\AppData\Local\Temp\tmp1408hev9.txt
+2026-02-04 16:23:34,217 - resume_optimizer - INFO - Starting resume analysis
+2026-02-04 16:23:34,218 - resume_optimizer - INFO - Text stats: 147 words, 1049 chars
+2026-02-04 16:23:34,225 - resume_optimizer - INFO - Analysis complete. ATS Score: 75
+2026-02-04 16:23:41,168 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:23:41,168 - __main__ - INFO - Reading file: examples\test-cv-maria.txt
+2026-02-04 16:23:41,169 - __main__ - INFO - Detected format: txt
+2026-02-04 16:23:41,169 - __main__ - INFO - Reading text file: examples\test-cv-maria.txt
+2026-02-04 16:23:41,180 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:23:41,180 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:23:41,181 - __main__ - INFO - Text stats: 165 words, 1060 chars
+2026-02-04 16:23:41,193 - __main__ - INFO - Analysis complete. ATS Score: 23
+2026-02-04 16:23:41,193 - __main__ - ERROR - Unexpected error
+Traceback (most recent call last):
+  File "C:\Users\Hejhej\.openclaw\workspace\projects\quick-income\resume-service\resume_optimizer.py", line 1494, in main
+    print(f"  - {area}")
+  File "C:\Users\Hejhej\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 18: character maps to <undefined>
+2026-02-04 16:23:56,188 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:23:56,188 - __main__ - INFO - Reading file: examples\test-cv-erik-cfo.txt
+2026-02-04 16:23:56,188 - __main__ - INFO - Detected format: txt
+2026-02-04 16:23:56,188 - __main__ - INFO - Reading text file: examples\test-cv-erik-cfo.txt
+2026-02-04 16:23:56,219 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:23:56,219 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:23:56,219 - __main__ - INFO - Text stats: 332 words, 2695 chars
+2026-02-04 16:23:56,234 - __main__ - INFO - Analysis complete. ATS Score: 48
+2026-02-04 16:23:56,234 - __main__ - ERROR - Unexpected error
+Traceback (most recent call last):
+  File "C:\Users\Hejhej\.openclaw\workspace\projects\quick-income\resume-service\resume_optimizer.py", line 1494, in main
+    print(f"  - {area}")
+  File "C:\Users\Hejhej\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 18: character maps to <undefined>
+2026-02-04 16:24:29,634 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:24:29,634 - __main__ - INFO - Reading file: examples\test-cv-maria.txt
+2026-02-04 16:24:29,635 - __main__ - INFO - Detected format: txt
+2026-02-04 16:24:29,635 - __main__ - INFO - Reading text file: examples\test-cv-maria.txt
+2026-02-04 16:24:29,636 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:24:29,636 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:24:29,636 - __main__ - INFO - Text stats: 165 words, 1060 chars
+2026-02-04 16:24:29,650 - __main__ - INFO - Analysis complete. ATS Score: 23
+2026-02-04 16:24:35,248 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:24:35,248 - __main__ - INFO - Reading file: examples\test-cv-erik-cfo.txt
+2026-02-04 16:24:35,248 - __main__ - INFO - Detected format: txt
+2026-02-04 16:24:35,248 - __main__ - INFO - Reading text file: examples\test-cv-erik-cfo.txt
+2026-02-04 16:24:35,249 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:24:35,249 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:24:35,249 - __main__ - INFO - Text stats: 332 words, 2695 chars
+2026-02-04 16:24:35,264 - __main__ - INFO - Analysis complete. ATS Score: 48
+2026-02-04 16:24:41,206 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:24:41,206 - __main__ - INFO - Reading file: examples\test-cv-johan-it.txt
+2026-02-04 16:24:41,207 - __main__ - INFO - Detected format: txt
+2026-02-04 16:24:41,208 - __main__ - INFO - Reading text file: examples\test-cv-johan-it.txt
+2026-02-04 16:24:41,242 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:24:41,242 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:24:41,243 - __main__ - INFO - Text stats: 136 words, 1030 chars
+2026-02-04 16:24:41,256 - __main__ - INFO - Analysis complete. ATS Score: 33
+2026-02-04 16:24:41,257 - __main__ - ERROR - File not found: [Errno 2] No such file or directory: 'test-results\\johan-it-result.json'
+2026-02-04 16:24:51,522 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:24:51,523 - __main__ - INFO - Reading file: examples\test-cv-johan-it.txt
+2026-02-04 16:24:51,523 - __main__ - INFO - Detected format: txt
+2026-02-04 16:24:51,523 - __main__ - INFO - Reading text file: examples\test-cv-johan-it.txt
+2026-02-04 16:24:51,523 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:24:51,524 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:24:51,524 - __main__ - INFO - Text stats: 136 words, 1030 chars
+2026-02-04 16:24:51,534 - __main__ - INFO - Analysis complete. ATS Score: 33
+2026-02-04 16:25:01,178 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:25:01,178 - __main__ - INFO - Reading file: examples\test-cv-anna-bygg.txt
+2026-02-04 16:25:01,179 - __main__ - INFO - Detected format: txt
+2026-02-04 16:25:01,179 - __main__ - INFO - Reading text file: examples\test-cv-anna-bygg.txt
+2026-02-04 16:25:01,208 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:25:01,208 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:25:01,209 - __main__ - INFO - Text stats: 202 words, 1329 chars
+2026-02-04 16:25:01,231 - __main__ - INFO - Analysis complete. ATS Score: 28
+2026-02-04 16:25:01,804 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:25:01,804 - __main__ - INFO - Reading file: examples\test-cv-lisa-vard.txt
+2026-02-04 16:25:01,805 - __main__ - INFO - Detected format: txt
+2026-02-04 16:25:01,806 - __main__ - INFO - Reading text file: examples\test-cv-lisa-vard.txt
+2026-02-04 16:25:01,823 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:25:01,824 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:25:01,824 - __main__ - INFO - Text stats: 220 words, 1448 chars
+2026-02-04 16:25:01,838 - __main__ - INFO - Analysis complete. ATS Score: 28
+2026-02-04 16:25:02,331 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:25:02,332 - __main__ - INFO - Reading file: examples\test-cv-maria.txt
+2026-02-04 16:25:02,332 - __main__ - INFO - Detected format: txt
+2026-02-04 16:25:02,333 - __main__ - INFO - Reading text file: examples\test-cv-maria.txt
+2026-02-04 16:25:02,333 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:25:02,333 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:25:02,334 - __main__ - INFO - Text stats: 165 words, 1060 chars
+2026-02-04 16:25:02,350 - __main__ - INFO - Analysis complete. ATS Score: 23
+2026-02-04 16:25:02,789 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:25:02,789 - __main__ - INFO - Reading file: examples\test-cv-erik-cfo.txt
+2026-02-04 16:25:02,789 - __main__ - INFO - Detected format: txt
+2026-02-04 16:25:02,790 - __main__ - INFO - Reading text file: examples\test-cv-erik-cfo.txt
+2026-02-04 16:25:02,790 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:25:02,790 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:25:02,790 - __main__ - INFO - Text stats: 332 words, 2695 chars
+2026-02-04 16:25:02,806 - __main__ - INFO - Analysis complete. ATS Score: 48

@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "timestamp": "2026-02-04T16:23:29.878780",
+    "file": {
+      "path": "sample_resume.txt",
+      "format": "txt",
+      "size_bytes": 1067,
+      "text_hash": "3a9f8e2d2a87f1348ddfc5ec21998414"
+    }
+  },
+  "language": {
+    "detected": "en"
+  },
+  "metrics": {
+    "word_count": 147,
+    "char_count": 1049,
+    "line_count": 33,
+    "bullet_points": 21,
+    "sections": 5
+  },
+  "content_analysis": {
+    "has_contact_info": true,
+    "has_email": true,
+    "has_phone": true,
+    "has_linkedin": true,
+    "has_summary": true,
+    "has_education": true,
+    "has_experience": true,
+    "has_skills_section": true
+  },
+  "quality_metrics": {
+    "power_verbs": 3,
+    "power_verb_variety": 3,
+    "quantified_achievements": 2,
+    "bullet_quality_score": 40.7,
+    "action_oriented_bullets": 33.3
+  },
+  "keywords": {
+    "detected_industry": "tech",
+    "found": {
+      "python": 1,
+      "javascript": 1,
+      "api": 1,
+      "git": 1,
+      "aws": 2,
+      "docker": 1,
+      "react": 2,
+      "node.js": 2,
+      "agile": 2,
+      "scrum": 1,
+      "ci/cd": 1
+    },
+    "missing": [
+      "java",
+      "sql",
+      "kubernetes",
+      "devops",
+      "microservices",
+      "cloud",
+      "rest api",
+      "machine learning",
+      "data structures",
+      "algorithms"
+    ],
+    "coverage_percent": 52.4
+  },
+  "ats_score": {
+    "total": 75,
+    "breakdown": {
+      "contact_info": 15,
+      "structure": 20,
+      "content_quality": 7,
+      "keywords": 20,
+      "formatting": 8,
+      "readability": 5,
+      "total": 75
+    }
+  },
+  "recommendations": {
+    "critical_issues": [],
+    "warnings": [
+      "[WARN] Weak phrases detected: responsible for, duties included, worked on. Replace with stronger language."
+    ],
+    "suggestions": [
+      "[TIP] Vary your action verbs. Try: achieved, trained, managed, created",
+      "[TIP] Improve bullet quality: Start with action verbs, include metrics, keep 50-150 chars.",
+      "[TIP] More bullets should start with action verbs. Revise passive statements.",
+      "[TIP] Expand your resume with more specific achievements and responsibilities."
+    ]
+  }
+}

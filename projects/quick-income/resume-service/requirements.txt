@@ -1,0 +1,14 @@
+# Resume Optimizer Dependencies
+# Install with: pip install -r requirements.txt
+
+# PDF Support
+PyPDF2>=3.0.0
+
+# DOCX Support (optional)
+python-docx>=0.8.11
+
+# Optional: For advanced PDF text extraction
+# pdfplumber>=0.6.0
+
+# Optional: For better language detection
+# langdetect>=1.0.9

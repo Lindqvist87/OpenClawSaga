@@ -1,0 +1,32 @@
+
+John Andersson
+Stockholm, Sverige
+john.andersson@email.se | +46 70 123 45 67 | linkedin.com/in/johnandersson
+
+PROFESSIONAL SUMMARY
+Experienced software developer with 5+ years in full-stack development. 
+Passionate about creating scalable solutions and mentoring junior developers.
+
+WORK EXPERIENCE
+
+Senior Developer | Tech Solutions AB | 2020 - Present
+• Led a team of 5 developers in agile sprints
+• Improved application performance by 40% through optimization
+• Implemented CI/CD pipeline reducing deployment time by 50%
+• Responsible for code reviews and mentoring junior developers
+
+Developer | Digital Innovations | 2018 - 2020
+• Worked on various web applications using React and Node.js
+• Duties included frontend development and API integration
+• Helped with bug fixes and feature implementations
+
+EDUCATION
+Master of Science in Computer Engineering
+KTH Royal Institute of Technology, 2018
+
+SKILLS
+Python, JavaScript, React, Node.js, AWS, Docker, Git, Agile
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect
+• Scrum Master Certification

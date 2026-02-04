@@ -1,0 +1,41 @@
+Johan Eriksson
+Telefon: 073-456 78 90 | johan.eriksson@email.se
+LinkedIn: linkedin.com/in/johaneriksson
+
+PROFIL
+Nyligen examinerad systemvetare med passion för programmering och problemlösning. Söker min första utmaning inom mjukvaruutveckling där jag kan tillämpa mina kunskaper i Java och Python.
+
+UTBILDNING
+Systemvetenskap, Stockholms Universitet | 2020-2023
+- Kandidatexamen i systemvetenskap
+- Kurser: Databaser, programmering, systemutveckling
+- C-snitt i alla kurser
+
+TEKNISKA KUNSKAPER
+- Java (grundläggande)
+- Python
+- HTML/CSS
+- SQL (MySQL)
+- Git
+- Agil utveckling
+
+PROJEKT
+Examensarbete: Utvecklade en webbapp för bokning av grupprum
+- Använde Java och MySQL
+- Skapade en fungerande prototyp
+
+ARBETSLIVSERFARENHET
+Sommarjobb, ICA Supermarket | Sommaren 2022
+- Jobbade i kassan
+- Fick lära mig om kundservice
+- Arbetade i team
+
+SOMMARJOBB
+- Budbilschaufför (2021)
+- Lagerarbetare på Coop (2020)
+
+SPRÅK
+Svenska (modersmål), Engelska (bra), Tyska (grundläggande)
+
+INTRESSEN
+Spela gitarr, fotboll, programmera på fritiden
