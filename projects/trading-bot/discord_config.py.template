@@ -1,0 +1,20 @@
+# Discord Bot Configuration Template
+# Kopiera till discord_config.py och fyll i dina värden
+
+DISCORD_BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # Få från Discord Developer Portal
+
+# Channel where bot should listen and respond
+DISCORD_CHANNEL_ID = "YOUR_CHANNEL_ID_HERE"
+
+# Bot settings
+COMMAND_PREFIX = "!"
+ENABLE_DM = True
+
+# Features
+NOTIFY_TRADES = True
+NOTIFY_DAILY_REPORT = True
+NOTIFY_ERRORS = True
+
+# Auto-respond to messages
+AUTO_RESPOND = True
+RESPONSE_DELAY = 1  # seconds

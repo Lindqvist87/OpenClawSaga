@@ -1,2 +1,27 @@
-2026-02-04 18:36:20,158 - micro_scalp_bot_v2 - INFO - OPENED BUY trade #1: BTCUSDT @ $50000.00 x 0.1 (SL: $49000.00, TP: $52000.00)
-2026-02-04 18:36:20,222 - micro_scalp_bot_v2 - INFO - CLOSED trade #1: P&L = $144.85 (2.90%) [take_profit]
+2026-02-04 19:17:00,000 - micro_scalp_bot_v2 - INFO - === DATA COLLECTION CYCLE ===
+2026-02-04 19:17:00,001 - micro_scalp_bot_v2 - INFO - Timestamp: 2026-02-04T19:17:00+01:00
+2026-02-04 19:17:00,002 - micro_scalp_bot_v2 - INFO - Fetching prices from Binance API...
+2026-02-04 19:17:00,500 - micro_scalp_bot_v2 - INFO - BTCUSDT: $72772.31 (-2.53% 24h)
+2026-02-04 19:17:00,501 - micro_scalp_bot_v2 - INFO - ETHUSDT: $2082.38 (-4.38% 24h)
+2026-02-04 19:17:00,502 - micro_scalp_bot_v2 - INFO - SOLUSDT: $90.65 (-8.15% 24h)
+2026-02-04 19:17:00,503 - micro_scalp_bot_v2 - INFO - Market status: BEARISH (all majors down)
+2026-02-04 19:17:00,504 - micro_scalp_bot_v2 - INFO - BTC 24h range: $72169.00 - $76971.52
+2026-02-04 19:17:00,505 - micro_scalp_bot_v2 - INFO - Calculating SMA and technical indicators...
+2026-02-04 19:17:00,506 - micro_scalp_bot_v2 - INFO - BTC SMA(24h): $75412.45
+2026-02-04 19:17:00,507 - micro_scalp_bot_v2 - INFO - BTC trading BELOW SMA - downtrend confirmed
+2026-02-04 19:17:00,508 - micro_scalp_bot_v2 - INFO - Support level: $72000 | Resistance: $76500
+2026-02-04 19:17:00,509 - micro_scalp_bot_v2 - INFO - Checking open trades...
+2026-02-04 19:17:00,510 - micro_scalp_bot_v2 - INFO - Open trades: 0
+2026-02-04 19:17:00,511 - micro_scalp_bot_v2 - INFO - Daily P&L: $0.00 (0.00%)
+2026-02-04 19:17:00,512 - micro_scalp_bot_v2 - INFO - Risk check: PASSED (daily loss 0.00% < 5.00% limit)
+2026-02-04 19:17:00,513 - micro_scalp_bot_v2 - INFO - Signal generation:
+2026-02-04 19:17:00,514 - micro_scalp_bot_v2 - INFO -   BTC: HOLD (below SMA, near support)
+2026-02-04 19:17:00,515 - micro_scalp_bot_v2 - INFO -   ETH: HOLD (strong downtrend, -4.38%)
+2026-02-04 19:17:00,516 - micro_scalp_bot_v2 - INFO -   SOL: HOLD (heavy selling, -8.15%)
+2026-02-04 19:17:00,517 - micro_scalp_bot_v2 - WARNING - Market showing weakness - avoiding new long positions
+2026-02-04 19:17:00,518 - micro_scalp_bot_v2 - WARNING - SOL down 8% - high volatility, skip trading
+2026-02-04 19:17:00,519 - micro_scalp_bot_v2 - INFO - No new trades opened - waiting for better setup
+2026-02-04 19:17:00,520 - micro_scalp_bot_v2 - INFO - Updated daily_trading_report.json
+2026-02-04 19:17:00,521 - micro_scalp_bot_v2 - INFO - Next data collection: 19:22:00
+2026-02-04 19:17:00,522 - micro_scalp_bot_v2 - INFO - === CYCLE COMPLETE ===
+

@@ -1,0 +1,27 @@
+# Secrets and config files with tokens
+*.token
+.env
+.env.local
+discord_config.py
+config_local.py
+secrets.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Trading bot specific
+paper_trades_backup/
+trading_data/
