@@ -24,6 +24,15 @@ Vi är ett **true partnership**:
 
 ## 📊 Aktiva Projekt
 
+### CV-tjänsten (LinkedIn + CV-optimering)
+- **Status:** Klar för lansering, behöver Stripe-setup
+- **🔥 NYTT (2026-02-04):** LinkedIn "360 Brew" algoritm uppdaterad!
+  - Algoritmen visar content mer exakt till ICP vid rätt signaler
+  - Profiler ska se ut som "viss roll i viss sektor"
+  - ~80% känner sig oförberedda för jobbsök 2026 → MASSIVT behov
+  - **Action:** Paketera LinkedIn-profiloptimering som kärnerbjudande
+- **Konkurrensfördel:** First-mover på 360 Brew-insikten i Sverige
+
 ### YouTube Comeback
 - **Kanal:** @SimpleStartAI (~200 subs)
 - **Status:** Vilande → ska återupplivas
