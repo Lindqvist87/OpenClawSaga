@@ -66,5 +66,20 @@
   ],
   "alerts": [
     "SOL: Significant move (-5.01%)"
-  ]
+  ],
+  "optimization_analysis": {
+    "timestamp": "2026-02-04T20:46:00",
+    "period_hours": 6,
+    "status": "NO_OPTIMIZATION_NEEDED",
+    "win_rate": 100.0,
+    "consecutive_losses": 0,
+    "pnl_6h": 144.85,
+    "checks": {
+      "win_rate_above_50": true,
+      "consecutive_losses_below_3": true,
+      "pnl_above_negative_50": true
+    },
+    "codex_triggered": false,
+    "report_file": "reports/performance_analysis_2026-02-04_2046.md"
+  }
 }
