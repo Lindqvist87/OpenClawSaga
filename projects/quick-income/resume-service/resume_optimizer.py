@@ -339,25 +339,45 @@ class ResumeOptimizer:
     # Swedish keywords
     KEYWORDS_SV = {
         'tech': ['python', 'javascript', 'java', 'sql', 'api', 'git', 'aws', 
-                 'docker', 'kubernetes', 'react', 'agil', 'scrum'],
+                 'docker', 'kubernetes', 'react', 'agil', 'scrum', 'programmering',
+                 'utveckling', 'systemutveckling', 'mjukvaruutveckling', 'kodning'],
         'sales': ['försäljning', 'kundrelationer', 'affärsutveckling', 'avtal', 
-                  'kundservice', 'nykundsbearbetning'],
+                  'kundservice', 'nykundsbearbetning', 'sälj', 'budget', 'försäljningsbudget'],
+        'marketing': ['marknadsföring', 'digital marknadsföring', 'seo', 'sem', 
+                      'sociala medier', 'content', 'kampanjer', 'kommunikation'],
+        'finance': ['redovisning', 'ekonomi', 'budgetering', 'prognoser', 
+                    'bokslut', 'finansiell analys', 'kassaflöde', 'lönsamhet'],
         'admin': ['kontor', 'administration', 'kundservice', 'dokumentation', 
-                  'schema', 'sekreterare']
+                  'schema', 'sekreterare', 'koordinering', 'beställningar'],
+        'healthcare': ['vård', 'patientvård', 'omvårdnad', 'hälso- och sjukvård',
+                       'medicinsk dokumentation', 'behandling', 'diagnos']
     }
     
-    # Resume sections
+    # Resume sections - English + Swedish
     SECTION_KEYWORDS = {
         'summary': ['summary', 'professional summary', 'profile', 'about me', 
-                    'objective', 'career summary', 'professional profile'],
+                    'objective', 'career summary', 'professional profile',
+                    # Swedish
+                    'sammanfattning', 'profil', 'om mig', 'personlig profil'],
         'experience': ['experience', 'work experience', 'employment history', 
-                       'professional experience', 'work history', 'career history'],
+                       'professional experience', 'work history', 'career history',
+                       # Swedish
+                       'erfarenhet', 'arbetslivserfarenhet', 'arbetserfarenhet', 
+                       'yrkeserfarenhet', 'anställningar', 'tidigare anställningar'],
         'education': ['education', 'academic background', 'qualifications', 
-                      'educational background', 'academic history'],
+                      'educational background', 'academic history',
+                      # Swedish
+                      'utbildning', 'studier', 'akademisk bakgrund', 
+                      'examen', 'universitet', 'högskola', 'gymnasium'],
         'skills': ['skills', 'technical skills', 'core competencies', 
-                   'key skills', 'expertise', 'competencies'],
+                   'key skills', 'expertise', 'competencies',
+                   # Swedish
+                   'kompetenser', 'färdigheter', 'kunskaper', 'tekniska kunskaper',
+                   'key competencies', 'tekniska kompetenser'],
         'certifications': ['certifications', 'certificates', 'professional development',
-                          'licenses', 'accreditations']
+                          'licenses', 'accreditations',
+                          # Swedish
+                          'certifieringar', 'certifikat', 'kurser', 'vidareutbildning']
     }
     
     # Weak words to avoid

@@ -187,3 +187,43 @@ UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 
 2026-02-04 16:25:02,790 - __main__ - INFO - Starting resume analysis
 2026-02-04 16:25:02,790 - __main__ - INFO - Text stats: 332 words, 2695 chars
 2026-02-04 16:25:02,806 - __main__ - INFO - Analysis complete. ATS Score: 48
+2026-02-04 16:28:45,734 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:28:45,734 - __main__ - INFO - Reading file: examples\test-cv-maria.txt
+2026-02-04 16:28:45,735 - __main__ - INFO - Detected format: txt
+2026-02-04 16:28:45,735 - __main__ - INFO - Reading text file: examples\test-cv-maria.txt
+2026-02-04 16:28:45,735 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:28:45,736 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:28:45,736 - __main__ - INFO - Text stats: 165 words, 1060 chars
+2026-02-04 16:28:45,754 - __main__ - INFO - Analysis complete. ATS Score: 43
+2026-02-04 16:28:52,006 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:28:52,006 - __main__ - INFO - Reading file: examples\test-cv-erik-cfo.txt
+2026-02-04 16:28:52,007 - __main__ - INFO - Detected format: txt
+2026-02-04 16:28:52,007 - __main__ - INFO - Reading text file: examples\test-cv-erik-cfo.txt
+2026-02-04 16:28:52,007 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:28:52,007 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:28:52,009 - __main__ - INFO - Text stats: 332 words, 2695 chars
+2026-02-04 16:28:52,022 - __main__ - INFO - Analysis complete. ATS Score: 63
+2026-02-04 16:29:00,430 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:29:00,430 - __main__ - INFO - Reading file: examples\test-cv-johan-it.txt
+2026-02-04 16:29:00,431 - __main__ - INFO - Detected format: txt
+2026-02-04 16:29:00,431 - __main__ - INFO - Reading text file: examples\test-cv-johan-it.txt
+2026-02-04 16:29:00,431 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:29:00,431 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:29:00,432 - __main__ - INFO - Text stats: 136 words, 1030 chars
+2026-02-04 16:29:00,443 - __main__ - INFO - Analysis complete. ATS Score: 53
+2026-02-04 16:29:00,884 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:29:00,884 - __main__ - INFO - Reading file: examples\test-cv-anna-bygg.txt
+2026-02-04 16:29:00,885 - __main__ - INFO - Detected format: txt
+2026-02-04 16:29:00,885 - __main__ - INFO - Reading text file: examples\test-cv-anna-bygg.txt
+2026-02-04 16:29:00,885 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:29:00,885 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:29:00,885 - __main__ - INFO - Text stats: 202 words, 1329 chars
+2026-02-04 16:29:00,899 - __main__ - INFO - Analysis complete. ATS Score: 48
+2026-02-04 16:29:01,322 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:29:01,322 - __main__ - INFO - Reading file: examples\test-cv-lisa-vard.txt
+2026-02-04 16:29:01,322 - __main__ - INFO - Detected format: txt
+2026-02-04 16:29:01,323 - __main__ - INFO - Reading text file: examples\test-cv-lisa-vard.txt
+2026-02-04 16:29:01,323 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:29:01,323 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:29:01,323 - __main__ - INFO - Text stats: 220 words, 1448 chars
+2026-02-04 16:29:01,336 - __main__ - INFO - Analysis complete. ATS Score: 43

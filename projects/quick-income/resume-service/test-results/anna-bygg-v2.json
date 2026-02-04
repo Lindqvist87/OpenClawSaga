@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "timestamp": "2026-02-04T16:29:00.885881",
+    "file": {
+      "path": "examples\\test-cv-anna-bygg.txt",
+      "format": "txt",
+      "size_bytes": 1352,
+      "text_hash": "7c003c0be90721c977dbeaae52555c71"
+    }
+  },
+  "language": {
+    "detected": "sv"
+  },
+  "metrics": {
+    "word_count": 202,
+    "char_count": 1329,
+    "line_count": 50,
+    "bullet_points": 61,
+    "sections": 5
+  },
+  "content_analysis": {
+    "has_contact_info": true,
+    "has_email": true,
+    "has_phone": true,
+    "has_linkedin": false,
+    "has_summary": true,
+    "has_education": true,
+    "has_experience": true,
+    "has_skills_section": true
+  },
+  "quality_metrics": {
+    "power_verbs": 2,
+    "power_verb_variety": 2,
+    "quantified_achievements": 0,
+    "bullet_quality_score": 1.3,
+    "action_oriented_bullets": 4.0
+  },
+  "keywords": {
+    "detected_industry": "construction",
+    "found": {},
+    "missing": [
+      "python",
+      "javascript",
+      "java",
+      "sql",
+      "api",
+      "git",
+      "aws",
+      "docker",
+      "kubernetes",
+      "react",
+      "node.js",
+      "agile",
+      "scrum",
+      "ci/cd",
+      "devops",
+      "microservices",
+      "cloud",
+      "rest api",
+      "machine learning",
+      "data structures",
+      "algorithms"
+    ],
+    "coverage_percent": 0.0
+  },
+  "ats_score": {
+    "total": 48,
+    "breakdown": {
+      "contact_info": 15,
+      "structure": 20,
+      "content_quality": 0,
+      "keywords": 0,
+      "formatting": 3,
+      "readability": 10,
+      "total": 48
+    }
+  },
+  "recommendations": {
+    "critical_issues": [],
+    "warnings": [
+      "[WARN] No LinkedIn URL found. Adding it increases recruiter engagement.",
+      "[WARN] Too many bullet points. Focus on 10-15 strongest achievements.",
+      "[WARN] Few action verbs detected. Start bullets with strong action verbs.",
+      "[WARN] Limited quantified achievements. Add numbers/percentages to demonstrate impact."
+    ],
+    "suggestions": [
+      "[TIP] Add more industry keywords. Missing: python, javascript, java, sql, api",
+      "[TIP] Vary your action verbs. Try: achieved, improved, trained, managed",
+      "[TIP] Improve bullet quality: Start with action verbs, include metrics, keep 50-150 chars.",
+      "[TIP] More bullets should start with action verbs. Revise passive statements.",
+      "[TIP] Expand your resume with more specific achievements and responsibilities.",
+      "[TIP] For Swedish CVs: Consider adding a personal letter (personligt brev) as a complement."
+    ]
+  }
+}

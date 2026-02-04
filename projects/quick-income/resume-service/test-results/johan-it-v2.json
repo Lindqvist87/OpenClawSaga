@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "timestamp": "2026-02-04T16:29:00.431215",
+    "file": {
+      "path": "examples\\test-cv-johan-it.txt",
+      "format": "txt",
+      "size_bytes": 1046,
+      "text_hash": "e421bbaf4a7ae1b81d0358095322db72"
+    }
+  },
+  "language": {
+    "detected": "sv"
+  },
+  "metrics": {
+    "word_count": 136,
+    "char_count": 1030,
+    "line_count": 42,
+    "bullet_points": 35,
+    "sections": 5
+  },
+  "content_analysis": {
+    "has_contact_info": true,
+    "has_email": true,
+    "has_phone": true,
+    "has_linkedin": true,
+    "has_summary": true,
+    "has_education": true,
+    "has_experience": true,
+    "has_skills_section": true
+  },
+  "quality_metrics": {
+    "power_verbs": 2,
+    "power_verb_variety": 2,
+    "quantified_achievements": 0,
+    "bullet_quality_score": 4.2,
+    "action_oriented_bullets": 6.2
+  },
+  "keywords": {
+    "detected_industry": "tech",
+    "found": {
+      "python": 2,
+      "java": 3,
+      "sql": 1,
+      "git": 1
+    },
+    "missing": [
+      "javascript",
+      "api",
+      "aws",
+      "docker",
+      "kubernetes",
+      "react",
+      "node.js",
+      "agile",
+      "scrum",
+      "ci/cd",
+      "devops",
+      "microservices",
+      "cloud",
+      "rest api",
+      "machine learning",
+      "data structures",
+      "algorithms"
+    ],
+    "coverage_percent": 19.0
+  },
+  "ats_score": {
+    "total": 53,
+    "breakdown": {
+      "contact_info": 15,
+      "structure": 20,
+      "content_quality": 0,
+      "keywords": 10,
+      "formatting": 3,
+      "readability": 5,
+      "total": 53
+    }
+  },
+  "recommendations": {
+    "critical_issues": [],
+    "warnings": [
+      "[WARN] Too many bullet points. Focus on 10-15 strongest achievements.",
+      "[WARN] Few action verbs detected. Start bullets with strong action verbs.",
+      "[WARN] Limited quantified achievements. Add numbers/percentages to demonstrate impact."
+    ],
+    "suggestions": [
+      "[TIP] Add more industry keywords. Missing: javascript, api, aws, docker, kubernetes",
+      "[TIP] Vary your action verbs. Try: achieved, improved, trained, managed",
+      "[TIP] Improve bullet quality: Start with action verbs, include metrics, keep 50-150 chars.",
+      "[TIP] More bullets should start with action verbs. Revise passive statements.",
+      "[TIP] Expand your resume with more specific achievements and responsibilities.",
+      "[TIP] For Swedish CVs: Consider adding a personal letter (personligt brev) as a complement."
+    ]
+  }
+}
