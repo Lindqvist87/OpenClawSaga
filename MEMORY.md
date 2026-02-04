@@ -28,6 +28,11 @@ Vi är ett **true partnership**:
 - **Kanal:** @SimpleStartAI (~200 subs)
 - **Status:** Vilande → ska återupplivas
 - **Nästa:** API-nyckel, content-strategi
+- **💡 Strategy Insights (2026-02-04):**
+  - Fokusera på **kvalitet över kvantitet** - färre, välproducerade videos
+  - Algoritmen belönar **unik röst/perspektiv** - Christians litterära bakgrund = fördel
+  - **Evergreen content** kan ge views månader senare - tänk långsiktigt
+  - Små kanaler har faktisk chans nu - algoritmen bryr sig mer om nuvarande värde än subscriber count
 
 ## 🔧 Teknisk Setup
 - **AI:** Kimi K2.5 via NVIDIA (gratis)
@@ -51,13 +56,17 @@ Vi är ett **true partnership**:
 
 ## 📈 Marknadsmöjligheter (Uppdateras kontinuerligt)
 
-### AI & Tech (2026-02-04)
+### AI & Tech (2026-02-04) - UPPDATERAD 16:57
 - **Svenska AI-satsningar**: AI Sweden stöttar 100+ SMEs i Västsverland - möjlighet för AI-rådgivning
 - **Lovable unicorn**: Svenska AI-bolaget värderat till $1.8B efter $200M runda - Sverige = AI-hotspot
 - **Intel investerar**: Gaudi 2 system till AI Sweden - hårdvaru-kompetens efterfrågas
 - **AI Startup Landscape**: Plattform för att synas som AI-startup (aistartuplandscape.se)
+- **🆕 AI-First Commerce Boom**: 7 startups reste $428M (juni 2025-januari 2026) för att reshapa retail operations
+- **🆕 AI Micro-Agency Model**: Start $2k-5k → skala till $5k-50k/månad med starka marginaler
+- **🆕 AI Content Studio**: Start under $3k → $2k-10k/månad potential
+- **🆕 Top investors**: Alphabet, Andreessen Horowitz, Fidelity, Temasek backar AI-native operations
 
-### Sociala Medier (2026-02-04)
+### Sociala Medier (2026-02-04) - UPPDATERAD 16:57
 - **YouTube Shorts DOMINERAR**: 200+ miljarder visningar dagligen, engagement 5.91% (HÖGRE än TikTok 5.73% och Reels 5.53%)
 - **Google indexerar Instagram**: Public posts syns nu i Google-sök - Social SEO är hetare än någonsin
 - **Short-form video**: Fortsatt #1 format över alla plattformar
@@ -68,12 +77,87 @@ Vi är ett **true partnership**:
 - **🔥 NYTT: Employee influencers** - Företag använder egna anställda som influencers istället för externa creators
 - **🔥 NYTT: Multi-media content** - Video + bilder + interaktivitet krävs för synlighet i AI-summaries era
 - **⚠️ OBS: Passiv engagement** - Kommentarer ner 24% (TikTok) och 16% (Instagram) - folk konsumerar mer, engagerar mindre
+- **🆕 Algorithm 2026 Insights (från Sprout Social/Navigate Video):**
+  - Algoritmen analyserar nu **ton, format, struktur, delivery style** - inte bara nyckelord
+  - **Färre, högre kvalitet > high-volume publishing** - kvalitet slår kvantitet
+  - AI-analys går djupt: **frame-by-frame + sentiment analysis**
+  - Små kanaler kan explodera: algoritmen belönar **current value**, inte bara accumulated metrics
+  - **Evergreen content** kan resurfaca månader/år senare när ämnet blir relevant igen
 
-### Hot (Just Nu)
-- 🔥 YouTube Shorts engagement rate bäst i klassen
-- 🔥 Social SEO pga Google-indexering av Instagram
-- 🔥 Svensk AI-scen extremt het (funding, unicorns)
+### Hot (Just Nu) - UPPDATERAD 2026-02-04 16:57
+- 🔥 YouTube Algorithm 2026: Kvalitet > Kvantitet - små kanaler kan explodera
+- 🔥 AI Micro-Agency: Låg startkostnad ($2k-5k), hög skalbarhet ($5k-50k/mån)
+- 🔥 AI-First Commerce: $428M investerat i retail-AI på 7 månader
+- 🔥 Social SEO: Google indexerar Instagram - stort för content creators
+- 🔥 Svensk AI-scen extremt het (funding, unicorns, Intel-satsning)
+
+## 🤖 OpenClaw/Clawbot - Kunskapsbas (Uppdaterad 2026-02-04)
+
+### 🔥 Senaste Nyheter & Uppdateringar
+- **OpenClaw v2026.2.1** släppt nyligen - uppdaterade session-logs paths från .clawdbot till .openclaw
+- **AISa Skills** har officiellt lanserats på OpenClaw Marketplace - hanterar API keys från flera AI-providers
+- **Community växer explosionsartat** - 3,000+ skills, 1,715+ kuraterade, 12+ messaging platform integrations
+- **ZDNET varning**: Säkerhetsrisker med skills - viktigt att veta vad man installerar!
+
+### 📦 Viktiga Skills Installerade
+1. **prompt-guard** v2.6.1 - Skydd mot prompt injection attacker
+2. **find-skills** - Hitta och installera nya skills enkelt  
+3. **dont-hack-me** - Säkerhetsaudit av konfiguration
+4. **qmd-skill** - Hybrid search för markdown dokument
+5. **clawdbot-supermemory** - Supermemory integration
+6. **healthcheck** - Säkerhetshärdning och riskbedömning
+7. **bluebubbles** - iMessage integration
+8. **coding-agent** - Codex/Claude Code automation
+9. **skill-creator** - Skapa egna skills
+
+### 🔝 Rekommenderade Skills att Installera
+**För CV/LinkedIn-tjänsten:**
+- `resume-builder` - Generate professional resumes
+- `linkedin` - LinkedIn automation och profilhantering
+- `ui-ux-pro-max` - UI/UX design för landningssidor
+- `web-design-guidelines` - Web Interface Guidelines
+
+**För Business:**
+- `github` - Full GitHub integration
+- `git-sync` - Auto-sync workspace till GitHub
+- `slack` - Slack-kontroll för team
+- `discord` - Discord-integration för community
+- `whatsapp-styling-guide` - WhatsApp formatting
+
+**För Content:**
+- `sag` - ElevenLabs TTS
+- `openai-image-gen` - Bildgenerering
+- `frontend-design` - Production-grade frontend
+
+### 🔧 Användbara Kommandon
+```bash
+openclaw skills list          # Lista alla skills
+openclaw skills check         # Kolla vilka som är redo
+npx clawhub search [namn]     # Söka efter skills
+npx clawhub install [namn]    # Installera från ClawHub
+```
+
+### ⚠️ Säkerhetsbest Practices
+- **Skill vetting** - Granska skills innan installation (ZDNET varning)
+- Använd **prompt-guard** för skydd mot injection attacker
+- Kör **dont-hack-me** regelbundet för säkerhetsaudit
+- Var försiktig med skills som kräver breda behörigheter
+- Installera helst från officiella källor (ClawHub)
+
+### 📊 Community Stats (Feb 2026)
+- Totalt skills: 3,000+
+- Kuraterade: 1,715+
+- Kategorier: 30+
+- Messaging platforms: 12+
+
+### 📚 Lärresurser
+- **OpenClaw docs**: https://docs.openclaw.ai
+- **ClawHub**: https://clawhub.ai - Hitta nya skills
+- **Awesome List**: https://github.com/VoltAgent/awesome-openclaw-skills
+- **GitHub**: https://github.com/openclaw/openclaw
+- **Discord community**: https://discord.com/invite/clawd
 
 ---
-*Saga, 2025-01-17*
-*"Be genuinely helpful. Have opinions. Earn trust through competence."*
+*Saga, 2026-02-04*  
+*Senast uppdaterad: 17:05 - OpenClaw research pågår*  
+*"Be genuinely helpful. Have opinions. Earn trust through competence."
