@@ -1,0 +1,126 @@
+{
+  "lastUpdated": "2026-02-04T07:55:00+01:00",
+  "updateCycle": "halvtimmesvis",
+  "categories": {
+    "aiBusinessOpportunities": [
+      {
+        "id": "ai-micro-agency-2026",
+        "title": "AI-baserade mikrobyråer",
+        "description": "Startkostnad $2,000-$5,000, potential $5,000-$50,000/månad",
+        "source": "nucamp.co",
+        "published": "2026-02-03",
+        "relevance": "high",
+        "tags": ["AI", "byrå", "låg startkostnad", "hög marginal"],
+        "potentialForUs": "Christian har erfarenhet av dokumenthantering och affärssystem - AI-byrå inom detta område skulle passa"
+      },
+      {
+        "id": "ai-content-studio-2026",
+        "title": "AI Content Studio",
+        "description": "Start under $3,000, potential $2,000-$10,000/månad",
+        "source": "nucamp.co", 
+        "published": "2026-02-03",
+        "relevance": "high",
+        "tags": ["AI", "innehåll", "video", "text"],
+        "potentialForUs": "Kan kombineras med YouTube-kanalen @SimpleStartAI"
+      },
+      {
+        "id": "ai-chatbot-enterprise",
+        "title": "AI Chatbot för företag",
+        "description": "23.3% CAGR till 2030, berör kundsupport, försäljning, lead-generering",
+        "source": "appverticals.com",
+        "published": "2026-02-03",
+        "relevance": "high",
+        "tags": ["AI", "chatbot", "enterprise", "B2B"],
+        "potentialForUs": "Passar med Christians bakgrund inom affärssystem och dokumenthantering"
+      }
+    ],
+    "socialMediaTrends": [
+      {
+        "id": "private-communities-2026",
+        "title": "Privata communities växer",
+        "description": "Människor drar sig tillbaka från offentliga flöden till mindre, privata grupper",
+        "source": "mentionlytics.com",
+        "published": "2026-02-03",
+        "relevance": "medium",
+        "tags": ["community", "Discord", "Slack", "nyhetsbrev"],
+        "keyInsight": "Gen Z scrollar mindre - de vill ha meningsfulla, kuraterade utrymmen"
+      },
+      {
+        "id": "authenticity-over-polish",
+        "title": "Autenticitet slår polerat innehåll",
+        "description": "AI-genererat innehåll gör att människor värdesätter rått, ofiltrerat, mänskligt innehåll",
+        "source": "mentionlytics.com",
+        "published": "2026-02-03",
+        "relevance": "high",
+        "tags": ["autenticitet", "Instagram", "innehåll", "AI"],
+        "keyInsight": "Instagram skiftar fokus mot autenticitet 2026 - Mosseri har bekräftat"
+      },
+      {
+        "id": "longform-video-2026",
+        "title": "Långa videor tar över",
+        "description": "YouTube långform 30+ minuter: 73% av tiden 2024 (upp från 65% 2023)",
+        "source": "mentionlytics.com",
+        "published": "2026-02-03",
+        "relevance": "high",
+        "tags": ["YouTube", "video", "longform", "content"],
+        "keyInsight": "Korta videor skapar upptäckt, långa bygger förtroende och lojalitet",
+        "potentialForUs": "Revitalisera @SimpleStartAI med långformad content"
+      },
+      {
+        "id": "substack-superapp",
+        "title": "Substack blir 'Social Super-App'",
+        "description": "Över 35 miljoner månatliga prenumeranter, 5 miljoner betalade",
+        "source": "mentionlytics.com",
+        "published": "2026-02-03",
+        "relevance": "medium",
+        "tags": ["Substack", "nyhetsbrev", "community", "prenumeration"],
+        "keyInsight": "Substack har lanserat video, podcast, och nu Substack TV app"
+      },
+      {
+        "id": "youtube-shorts-wins",
+        "title": "YouTube Shorts slår TikTok",
+        "description": "200 miljarder dagliga visningar, engagement 5.91% (högre än TikToks 5.73%)",
+        "source": "mentionlytics.com",
+        "published": "2026-02-03",
+        "relevance": "high",
+        "tags": ["YouTube", "Shorts", "TikTok", "video"],
+        "keyInsight": "YouTube erbjuder 'full-funnel' - Shorts för upptäckt, långform för förtroende"
+      }
+    ],
+    "technologyTrends": [
+      {
+        "id": "ai-adoption-2025",
+        "title": "AI-adoption accelererar",
+        "description": "88% av organisationer använder AI i minst en affärsfunktion (upp från 78% 2024)",
+        "source": "qubit-labs.com",
+        "published": "2026-02-03",
+        "relevance": "high",
+        "tags": ["AI", "adoption", "enterprise"],
+        "keyInsight": "AI-ingenjörer behövs inom alla branscher"
+      }
+    ]
+  },
+  "actionItems": [
+    {
+      "action": "Utforska AI-byrå inom dokumenthantering/verksamhetsstöd",
+      "priority": "high",
+      "reason": "Matchar Christians expertis från Citedo"
+    },
+    {
+      "action": "Planera revitalisering av @SimpleStartAI med långformad content",
+      "priority": "medium",
+      "reason": "Trenden mot långa videor och autenticitet passar kanalen"
+    },
+    {
+      "action": "Överväg att starta Substack för djupare content",
+      "priority": "low",
+      "reason": "Substack växer som 'social super-app'"
+    }
+  ],
+  "summary": {
+    "totalOpportunities": 8,
+    "highRelevance": 5,
+    "keyTrend": "AI-integration och autentiskt innehåll dominerar 2026",
+    "recommendation": "Fokusera på AI-baserade tjänster kopplade till Christians befintliga expertis inom dokumenthantering och affärssystem"
+  }
+}
