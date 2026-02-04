@@ -603,7 +603,7 @@ def main():
     """Entry point"""
     print("[BOT] MICRO-SCALP TRADING BOT")
     print("="*60)
-    print("⚠️  PAPER TRADING MODE - NO REAL MONEY ⚠️")
+    print("[!] PAPER TRADING MODE - NO REAL MONEY [!]")
     print("="*60)
     print()
     

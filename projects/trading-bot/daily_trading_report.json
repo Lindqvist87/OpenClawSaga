@@ -1,85 +1,68 @@
 {
-  "timestamp": "2026-02-04T20:45:44.622962",
+  "timestamp": "2026-02-04T20:59:23.376533",
   "status": "PAPER_TRADING_ACTIVE",
   "market_summary": {
     "btc": {
-      "price": 73600.02,
-      "change_24h": -1.675,
+      "price": 73858.32,
+      "change_24h": -1.459,
       "high_24h": 76971.52,
       "low_24h": 72169.0,
-      "volume": 37249.61336
+      "volume": 37237.70841
     },
     "eth": {
-      "price": 2154.24,
-      "change_24h": -1.903,
+      "price": 2184.98,
+      "change_24h": -0.985,
       "high_24h": 2343.82,
       "low_24h": 2076.68,
-      "volume": 1383998.5028
+      "volume": 1396605.6064
     },
     "sol": {
-      "price": 94.05,
-      "change_24h": -5.01,
+      "price": 94.39,
+      "change_24h": -4.753,
       "high_24h": 102.07,
       "low_24h": 90.0,
-      "volume": 6214873.934
+      "volume": 6246011.202
     }
   },
   "trading_stats": {
-    "total_trades": 1,
-    "winning_trades": 1,
+    "total_trades": 0,
+    "winning_trades": 0,
     "losing_trades": 0,
-    "win_rate": 100.0,
-    "total_pnl": 144.85,
-    "open_trades": 3
+    "win_rate": 0,
+    "total_pnl": 0,
+    "open_trades": 2
   },
   "signals": {
     "BTCUSDT": {
-      "signal": "BUY",
-      "confidence": 0.6,
-      "current_price": 73600.02
+      "signal": "HOLD",
+      "confidence": 0,
+      "current_price": 73858.32
     },
     "ETHUSDT": {
       "signal": "BUY",
       "confidence": 0.6,
-      "current_price": 2154.36
+      "current_price": 2185.04
     },
     "SOLUSDT": {
       "signal": "BUY",
       "confidence": 0.6,
-      "current_price": 94.06
+      "current_price": 94.4
     }
   },
   "closed_trades": [],
   "new_trades": [
     {
-      "id": 3,
-      "symbol": "BTCUSDT",
-      "price": 73600.02,
-      "quantity": 0.000272
+      "id": 1,
+      "symbol": "ETHUSDT",
+      "price": 2185.04,
+      "quantity": 0.009153
     },
     {
-      "id": 4,
-      "symbol": "ETHUSDT",
-      "price": 2154.36,
-      "quantity": 0.009283
+      "id": 2,
+      "symbol": "SOLUSDT",
+      "price": 94.4,
+      "quantity": 0.211864
     }
   ],
-  "alerts": [
-    "SOL: Significant move (-5.01%)"
-  ],
-  "optimization_analysis": {
-    "timestamp": "2026-02-04T20:46:00",
-    "period_hours": 6,
-    "status": "NO_OPTIMIZATION_NEEDED",
-    "win_rate": 100.0,
-    "consecutive_losses": 0,
-    "pnl_6h": 144.85,
-    "checks": {
-      "win_rate_above_50": true,
-      "consecutive_losses_below_3": true,
-      "pnl_above_negative_50": true
-    },
-    "codex_triggered": false,
-    "report_file": "reports/performance_analysis_2026-02-04_2046.md"
-  }
+  "alerts": []
 }
