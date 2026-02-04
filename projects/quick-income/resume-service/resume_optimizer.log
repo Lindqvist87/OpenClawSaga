@@ -235,3 +235,11 @@ UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 
 2026-02-04 16:29:12,982 - __main__ - INFO - Starting resume analysis
 2026-02-04 16:29:12,982 - __main__ - INFO - Text stats: 165 words, 1060 chars
 2026-02-04 16:29:12,993 - __main__ - INFO - Analysis complete. ATS Score: 43
+2026-02-04 16:31:38,912 - __main__ - INFO - Initializing ResumeOptimizer v2.0.0 (lang: auto)
+2026-02-04 16:31:38,913 - __main__ - INFO - Reading file: examples\maria-lindberg-optimized.txt
+2026-02-04 16:31:38,913 - __main__ - INFO - Detected format: txt
+2026-02-04 16:31:38,913 - __main__ - INFO - Reading text file: examples\maria-lindberg-optimized.txt
+2026-02-04 16:31:38,924 - __main__ - INFO - Auto-detected language: sv
+2026-02-04 16:31:38,924 - __main__ - INFO - Starting resume analysis
+2026-02-04 16:31:38,925 - __main__ - INFO - Text stats: 399 words, 3101 chars
+2026-02-04 16:31:38,939 - __main__ - INFO - Analysis complete. ATS Score: 77
