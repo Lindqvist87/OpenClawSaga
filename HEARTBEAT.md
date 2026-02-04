@@ -45,7 +45,26 @@
 
 ---
 
-### Varje timme - Risk Assessment
+### Varje timme - Codex Optimization (Automatisk)
+**Att göra:**
+1. [ ] Låt Codex analysera trading_bot.log performance
+2. [ ] Förbättra signalgenerering med nya indikatorer
+3. [ ] Testa förbättringar i paper mode
+4. [ ] Commita ändringar till GitHub
+
+**Output:** Förbättrad bot-varje timme
+
+---
+
+### Dagligen kl 06:00 - Strategy Backtest
+**Att göra:**
+1. [ ] Ladda historisk data för BTC, ETH, SOL
+2. [ ] Kör backtest på senaste 30 dagarna
+3. [ ] Beräkna teoretisk avkastning, win-rate, drawdown
+4. [ ] Generera backtest-rapport
+5. [ ] Föreslå strategi-förbättringar
+
+---
 **Att göra:**
 1. [ ] Utvärdera riskhantering
 2. [ ] Kontrollera position sizes
