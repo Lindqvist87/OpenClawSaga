@@ -63,6 +63,16 @@ Vi är ett **true partnership**:
 3. ⏳ YouTube API + analys
 4. ⏳ Första affärsidé/sida
 
+## 🆕 Senaste Marknadsinsikter (2026-02-04)
+- **Arbetsförmedlingen rekommenderar AI för CV-optimering** (aug 2024) — signal om mainstream acceptance
+- **CVkungen.se** aktiv konkurrent med ATS-fokus
+- **GEO (Generative Engine Optimization)** — nytt område att övervaka för 2026
+- **Differentiering:** Kombinera CV-optimering med LinkedIn 360 Brew-insikten
+- **🔥 NYTT (17:59):** LinkedIn lanserar AI-driven jobbsökning globalt under 2026 — bredare lansering planerad (källa: Computer Sweden)
+- **🔥 NYTT (17:59):** Små företag (90% av alla företag) blir huvudingången för nyutexaminerade på arbetsmarknaden 2026 — möjlighet att positionera oss mot SME-segmentet
+- **🔥 NYTT (17:59):** Talentech dominerar ATS-marknaden i Norden — viktigt att förstå deras ekosystem för CV-optimering
+- **64% av jobbsökare** blir anställda via sina nätverk (LinkedIn data) — ytterligare bevis för kraften i LinkedIn-optimering
+
 ## 📈 Marknadsmöjligheter (Uppdateras kontinuerligt)
 
 ### AI & Tech (2026-02-04) - UPPDATERAD 16:57
