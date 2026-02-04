@@ -1,0 +1,10 @@
+Faktura #12345
+Från: Exempel AB
+Fakturadatum: 2026-02-01
+Förfallodatum: 2026-02-28
+
+Belopp: 1.234,56 kr
+Moms: 246,91 kr
+Totalt: 1.481,47 kr
+
+Att betala: 1 481,47 kr
