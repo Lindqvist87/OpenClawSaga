@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Optimizer | Få ditt CV att sticka ut</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.9; }
+        .cta-button { display: inline-block; background: #fff; color: #667eea; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s; }
+        .cta-button:hover { transform: translateY(-3px); }
+        
+        /* Stats */
+        .stats { display: flex; justify-content: center; gap: 60px; padding: 60px 0; background: #f8f9fa; }
+        .stat { text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: #667eea; }
+        .stat-label { color: #666; margin-top: 5px; }
+        
+        /* Features */
+        .features { padding: 80px 0; }
+        .features h2 { text-align: center; font-size: 2.5rem; margin-bottom: 60px; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature { text-align: center; padding: 30px; }
+        .feature-icon { font-size: 3rem; margin-bottom: 20px; }
+        .feature h3 { font-size: 1.3rem; margin-bottom: 10px; }
+        .feature p { color: #666; }
+        
+        /* Pricing */
+        .pricing { background: #f8f9fa; padding: 80px 0; }
+        .pricing h2 { text-align: center; font-size: 2.5rem; margin-bottom: 60px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }
+        .pricing-card { background: white; padding: 40px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .pricing-card.popular { border: 3px solid #667eea; position: relative; }
+        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #667eea; color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; }
+        .price { font-size: 3rem; font-weight: bold; color: #667eea; margin: 20px 0; }
+        .price span { font-size: 1rem; color: #666; }
+        .pricing-card ul { list-style: none; margin: 30px 0; }
+        .pricing-card li { padding: 10px 0; border-bottom: 1px solid #eee; }
+        .pricing-card li:last-child { border-bottom: none; }
+        
+        /* CTA */
+        .cta { padding: 80px 0; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .cta h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .cta p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+        
+        /* Footer */
+        footer { padding: 40px 0; text-align: center; color: #666; }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>🚀 Få ditt CV att sticka ut med AI</h1>
+            <p>85% av alla CV blir bortsållade av robotar. Vi optimerar ditt CV så det går igenom ATS-filter och imponerar på rekryterare.</p>
+            <a href="#pricing" class="cta-button">Optimera mitt CV - 299 kr</a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stat">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Optimerade CVn</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">94%</div>
+            <div class="stat-label">Får fler intervjuer</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">48h</div>
+            <div class="stat-label">Leveranstid</div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>Så här fungerar det</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">📤</div>
+                    <h3>1. Skicka ditt CV</h3>
+                    <p>Ladda upp ditt nuvarande CV i PDF eller Word-format.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>2. AI-analys</h3>
+                    <p>Vår AI analyserar och optimerar för ATS-system och rekryterare.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📥</div>
+                    <h3>3. Få resultatet</h3>
+                    <p>Du får ett optimerat CV + detaljerad rapport inom 48 timmar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Välj din paket</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>CV-optimering</h3>
+                    <div class="price">299 kr</div>
+                    <ul>
+                        <li>✅ ATS-kompatibel optimering</li>
+                        <li>✅ Nyckelordsanalys</li>
+                        <li>✅ Detaljerad rapport</li>
+                        <li>✅ 1 revidering ingår</li>
+                        <li>✅ 48h leveranstid</li>
+                    </ul>
+                    <a href="#" class="cta-button">Välj</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Mest populär</div>
+                    <h3>Komplett paket</h3>
+                    <div class="price">499 kr</div>
+                    <ul>
+                        <li>✅ Allt i CV-optimering</li>
+                        <li>✅ Personligt brev</li>
+                        <li>✅ LinkedIn-optimering</li>
+                        <li>✅ 2 revideringar</li>
+                        <li>✅ 24h rush-leverans</li>
+                    </ul>
+                    <a href="#" class="cta-button">Välj</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Redo att landa ditt drömjobb?</h2>
+            <p>Investera i din karriär idag. Första 5 kunderna får 50% rabatt!</p>
+            <a href="#pricing" class="cta-button">Kom igång nu</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 AI Resume Optimizer. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+</body>
+</html>
