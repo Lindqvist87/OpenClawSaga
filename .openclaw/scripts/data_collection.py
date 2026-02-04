@@ -128,6 +128,11 @@ def check_open_trades():
         
         current_price = current_data['price']
         
+        # Check for valid prices
+        if current_price is None or entry_price is None:
+            logger.warning(f"Skipping {symbol}: missing price data")
+            continue
+        
         # Check stop loss (1%) and take profit (2%)
         if side == 'BUY':
             stop_loss = entry_price * 0.99
@@ -175,7 +180,7 @@ def close_trade(conn, trade_id, exit_price):
 def main():
     """Main data collection loop"""
     logger.info("="*60)
-    logger.info("📊 TRADING BOT DATA COLLECTION (Windows)")
+    logger.info("TRADING BOT DATA COLLECTION (Windows)")
     logger.info("="*60)
     
     symbols = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
@@ -195,7 +200,7 @@ def main():
     update_report(symbols_data)
     
     logger.info("="*60)
-    logger.info("✅ Data collection complete")
+    logger.info("Data collection complete")
     logger.info("="*60)
 
 

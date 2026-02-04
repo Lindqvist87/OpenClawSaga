@@ -601,7 +601,7 @@ class MicroScalpBot:
 
 def main():
     """Entry point"""
-    print("🦞 MICRO-SCALP TRADING BOT")
+    print("[BOT] MICRO-SCALP TRADING BOT")
     print("="*60)
     print("⚠️  PAPER TRADING MODE - NO REAL MONEY ⚠️")
     print("="*60)
