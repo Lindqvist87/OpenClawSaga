@@ -1,68 +1,90 @@
 {
-  "timestamp": "2026-02-04T20:59:23.376533",
+  "timestamp": "2026-02-05T07:06:00.573470",
   "status": "PAPER_TRADING_ACTIVE",
   "market_summary": {
     "btc": {
-      "price": 73858.32,
-      "change_24h": -1.459,
-      "high_24h": 76971.52,
-      "low_24h": 72169.0,
-      "volume": 37237.70841
+      "price": 70502.94,
+      "change_24h": -7.76,
+      "high_24h": 76780.0,
+      "low_24h": 70140.0,
+      "volume": 50373.02
     },
     "eth": {
-      "price": 2184.98,
-      "change_24h": -0.985,
-      "high_24h": 2343.82,
+      "price": 2081.41,
+      "change_24h": -8.19,
+      "high_24h": 2293.99,
       "low_24h": 2076.68,
-      "volume": 1396605.6064
+      "volume": 1445775.04
     },
     "sol": {
-      "price": 94.39,
-      "change_24h": -4.753,
-      "high_24h": 102.07,
-      "low_24h": 90.0,
-      "volume": 6246011.202
+      "price": 89.81,
+      "change_24h": -7.79,
+      "high_24h": 98.8,
+      "low_24h": 89.3,
+      "volume": 6880200.12
     }
   },
   "trading_stats": {
-    "total_trades": 0,
+    "total_trades": 3,
     "winning_trades": 0,
-    "losing_trades": 0,
+    "losing_trades": 3,
     "win_rate": 0,
-    "total_pnl": 0,
-    "open_trades": 2
+    "total_pnl": -2.73,
+    "open_trades": 0,
+    "open_trades_pnl": 0,
+    "daily_loss_pct": 0.27
   },
-  "signals": {
-    "BTCUSDT": {
-      "signal": "HOLD",
-      "confidence": 0,
-      "current_price": 73858.32
-    },
-    "ETHUSDT": {
-      "signal": "BUY",
-      "confidence": 0.6,
-      "current_price": 2185.04
-    },
-    "SOLUSDT": {
-      "signal": "BUY",
-      "confidence": 0.6,
-      "current_price": 94.4
-    }
-  },
-  "closed_trades": [],
-  "new_trades": [
+  "open_positions": [],
+  "closed_trades": [
     {
-      "id": 1,
+      "symbol": "BTCUSDT",
+      "entry": 73527.25,
+      "exit": 70502.94,
+      "pnl": -0.79,
+      "pnl_pct": -4.12,
+      "reason": "STOP_LOSS"
+    },
+    {
       "symbol": "ETHUSDT",
-      "price": 2185.04,
-      "quantity": 0.009153
+      "entry": 2169.99,
+      "exit": 2081.41,
+      "pnl": -0.67,
+      "pnl_pct": -4.08,
+      "reason": "STOP_LOSS"
     },
     {
-      "id": 2,
       "symbol": "SOLUSDT",
-      "price": 94.4,
-      "quantity": 0.211864
+      "entry": 93.43,
+      "exit": 89.81,
+      "pnl": -0.45,
+      "pnl_pct": -3.88,
+      "reason": "STOP_LOSS"
     }
   ],
-  "alerts": []
+  "signals": {
+    "BTCUSDT": {
+      "signal": "SELL",
+      "confidence": 0.6,
+      "current_price": 70502.94,
+      "reason": "Downtrend confirmed"
+    },
+    "ETHUSDT": {
+      "signal": "SELL",
+      "confidence": 0.6,
+      "current_price": 2081.41,
+      "reason": "Downtrend confirmed"
+    },
+    "SOLUSDT": {
+      "signal": "SELL",
+      "confidence": 0.6,
+      "current_price": 89.81,
+      "reason": "Downtrend confirmed"
+    }
+  },
+  "alerts": [
+    "🚨 STOP LOSS triggered for ALL 3 positions",
+    "Market continues downtrend (-7% to -8%)",
+    "Daily loss limit: 0.27% (within 5% limit)",
+    "Waiting for trend reversal before new entries"
+  ]
 }

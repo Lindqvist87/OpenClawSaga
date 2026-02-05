@@ -1,33 +1,33 @@
 {
-  "timestamp": "2026-02-04T21:11:46.924829",
+  "timestamp": "2026-02-04T21:22:42.544220",
   "prices": {
-    "BTCUSDT": 73624.62,
-    "ETHUSDT": 2170.54,
-    "SOLUSDT": 93.6
+    "BTCUSDT": 73810.23,
+    "ETHUSDT": 2174.19,
+    "SOLUSDT": 94.06
   },
   "signals": {
     "BTCUSDT": {
-      "signal": "HOLD",
-      "confidence": 0.0,
-      "current_price": 73609.06,
-      "sma_10": 73613.73300000001,
-      "sma_20": 73630.3025,
+      "signal": "BUY",
+      "confidence": 0.6,
+      "current_price": 73800.01,
+      "sma_10": 73710.052,
+      "sma_20": 73611.0105,
       "volume_spike": false
     },
     "ETHUSDT": {
       "signal": "BUY",
       "confidence": 0.6,
-      "current_price": 2169.79,
-      "sma_10": 2161.662,
-      "sma_20": 2157.9134999999997,
+      "current_price": 2174.57,
+      "sma_10": 2168.103,
+      "sma_20": 2159.0154999999995,
       "volume_spike": false
     },
     "SOLUSDT": {
       "signal": "BUY",
       "confidence": 0.6,
-      "current_price": 93.58,
-      "sma_10": 93.90700000000001,
-      "sma_20": 93.532,
+      "current_price": 94.08,
+      "sma_10": 94.033,
+      "sma_20": 93.66399999999997,
       "volume_spike": false
     }
   },

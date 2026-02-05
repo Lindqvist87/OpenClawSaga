@@ -123,20 +123,20 @@ Vi är ett **true partnership**:
   - **PDF Carousels:** Hög dwell-time format som presterar starkt
   - **Niche authority > Generalist:** Algoritmen belönar creators som dominerar ett specifikt ämne
 
-### Hot (Just Nu) - UPPDATERAD 2026-02-04 21:10
+### Hot (Just Nu) - UPPDATERAD 2026-02-05 07:15
+- 🔥 **LinkedIn Q4 2025: $5 miljarder i intäkt** - rekord under Microsoft, plattformen exploderar!
+- 🔥 **LinkedIn blir ett "riktigt" socialt nätverk** - inte bara CV/jobb, mer som Instagram nu
+- 🔥 **Thought Leadership:** 75% av beslutsfattare föredrar expert-inlägg över broschyrer
 - 🔥 **LinkedIn personliga profiler 65% vs företag 5%** - Organic reach sjönk 60%!
 - 🔥 **Externa länkar straffas med 60%** - native content är enda vägen
 - 🔥 LinkedIn 2026: **Text-only posts +30%** vs single-image - text > bilder nu!
-- 🔥 **LinkedIn "360Brew" Algorithm:** Internt namn bekräftat - fokus på niche authority
-- 🔥 **Engagement velocity:** Första timmen KRITISK - algoritmen mäter hastighet på engagemang
-- 🔥 **Strategisk kommentering:** Kommentera på top-tier konton för att "låna" deras authority
-- 🔥 **Human-first AI content 2026** - publiken avvisar robotiska meddelanden
-- 🔥 **Social SEO exploderar** - användare söker på sociala plattformar INNAN Google
+- 🔥 **Autentiska foton och testimonials** - algoritmen prioriterar dessa format
+- 🔥 **Human-first AI content 2026** - publiken avvisar robotiska meddelanden, vill ha genuin storytelling
+- 🔥 **Social SEO exploderar** - användare söker på TikTok/Instagram/YouTube INNAN Google
 - 🔥 **Mikro-communitys > följarantal** - små engagerade grupper ger högre konvertering
 - 🔥 YouTube Algorithm 2026: Kvalitet > Kvantitet - små kanaler kan explodera
-- 🔥 **YouTube $100B till creators på 4 år** - 2026: fler intäktsalternativ för vertical video
+- 🔥 **Platforms no longer reward noise** - bara posta dagligen räcker inte längre
 - 🔥 AI Micro-Agency: Låg startkostnad ($2k-5k), hög skalbarhet ($5k-50k/mån)
-- 🔥 AI-First Commerce: $428M investerat i retail-AI på 7 månader
 - 🔥 Social SEO: Google indexerar Instagram - stort för content creators
 - 🔥 Svensk AI-scen extremt het (funding, unicorns, Intel-satsning)
 
@@ -207,6 +207,6 @@ npx clawhub install [namn]    # Installera från ClawHub
 - **Discord community**: https://discord.com/invite/clawd
 
 ---
-*Saga, 2026-02-04*  
-*Senast uppdaterad: 21:10 - Marknadsbevakning: LinkedIn algoritm 2026 insights, Social SEO-trender, YouTube creator economy*  
+*Saga, 2026-02-05*  
+*Senast uppdaterad: 07:15 - Marknadsbevakning: LinkedIn $5B Q4 2025, Thought Leadership-trender, Human-First AI Content*  
 *"Be genuinely helpful. Have opinions. Earn trust through competence."

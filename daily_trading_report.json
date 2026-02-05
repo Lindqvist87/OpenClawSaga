@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-02-05T07:13:36.058236",
+  "status": "PAPER_TRADING_ACTIVE",
+  "market_summary": {
+    "btc": {
+      "price": 70657.64,
+      "change_24h": -7.72,
+      "high_24h": 76780.0,
+      "low_24h": 70140.0,
+      "volume": 50530.88664
+    },
+    "eth": {
+      "price": 2091.5,
+      "change_24h": -8.09,
+      "high_24h": 2293.99,
+      "low_24h": 2076.68,
+      "volume": 1453463.0736
+    },
+    "sol": {
+      "price": 90.31,
+      "change_24h": -7.592,
+      "high_24h": 98.8,
+      "low_24h": 89.3,
+      "volume": 6908320.396
+    }
+  },
+  "trading_stats": {
+    "total_trades": 0,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "open_trades": 0,
+    "daily_loss_pct": 0
+  },
+  "open_positions": [],
+  "signals": {
+    "BTCUSDT": {
+      "signal": "SELL",
+      "confidence": 0.6,
+      "current_price": 70657.64,
+      "reason": "Downtrend confirmed"
+    },
+    "ETHUSDT": {
+      "signal": "SELL",
+      "confidence": 0.6,
+      "current_price": 2091.5,
+      "reason": "Downtrend confirmed"
+    },
+    "SOLUSDT": {
+      "signal": "SELL",
+      "confidence": 0.6,
+      "current_price": 90.31,
+      "reason": "Downtrend confirmed"
+    }
+  },
+  "alerts": [
+    "\ud83d\udea8 STOP LOSS: ETHUSDT @ $2,091.50",
+    "\ud83d\udea8 STOP LOSS: SOLUSDT @ $90.31"
+  ]
+}

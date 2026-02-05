@@ -42,3 +42,155 @@ Next check: 21:06 CET
 2026-02-04 21:20:25,681 - __main__ - INFO - Initial Balance: $1000.00
 2026-02-04 21:20:26,411 - __main__ - INFO - BUY signal for BTCUSDT: Uptrend confirmed (confidence: 0.6)
 2026-02-04 21:20:26,412 - __main__ - INFO - OPENED BUY trade: BTCUSDT @ $73797.20 x 0.000271
+
+2026-02-04 21:29:58 - DATA COLLECTION CYCLE
+============================================================
+Prices:
+  BTCUSDT: $73,570.54
+  ETHUSDT: $2,170.55
+  SOLUSDT: $93.28
+
+Open Trades (0):
+  None
+
+Signals Generated:
+  BTCUSDT: BUY (60% confidence)
+  ETHUSDT: BUY (60% confidence)
+  SOLUSDT: BUY (60% confidence)
+
+Trade Management:
+  No trades closed
+
+Stats:
+  Total Closed Trades: 0
+  Win Rate: 0.0%
+  Total P&L: $0.00
+  Daily Loss: 0.0% / 5.0%
+
+Next check: 21:30 CET
+============================================================
+2026-02-04 21:35:25,585 - __main__ - INFO - [START] Starting Micro-Scalp Bot (PAPER TRADING MODE)
+2026-02-04 21:35:25,595 - __main__ - INFO - Symbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
+2026-02-04 21:35:25,595 - __main__ - INFO - Initial Balance: $1000.00
+2026-02-04 21:35:26,396 - __main__ - INFO - BUY signal for BTCUSDT: Uptrend confirmed (confidence: 0.6)
+2026-02-04 21:35:26,397 - __main__ - INFO - OPENED BUY trade: BTCUSDT @ $73527.25 x 0.000272
+2026-02-04 21:35:27,274 - __main__ - INFO - BUY signal for ETHUSDT: Uptrend confirmed (confidence: 0.6)
+2026-02-04 21:35:27,275 - __main__ - INFO - OPENED BUY trade: ETHUSDT @ $2169.99 x 0.009217
+2026-02-04 21:35:28,165 - __main__ - INFO - BUY signal for SOLUSDT: Uptrend confirmed (confidence: 0.6)
+2026-02-04 21:35:28,166 - __main__ - INFO - OPENED BUY trade: SOLUSDT @ $93.43 x 0.214064
+2026-02-04 21:35:29,011 - __main__ - ERROR - [ERROR] Bot error: 'charmap' codec can't encode character '\u2192' in position 21: character maps to <undefined>
+2026-02-04 21:38:33,427 - __main__ - INFO - [START] Starting Micro-Scalp Bot (PAPER TRADING MODE)
+2026-02-04 21:38:33,427 - __main__ - INFO - Symbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
+2026-02-04 21:38:33,427 - __main__ - INFO - Initial Balance: $1000.00
+2026-02-04 21:38:34,224 - __main__ - INFO - BUY signal for BTCUSDT: Uptrend confirmed (confidence: 0.6)
+2026-02-04 21:38:34,224 - __main__ - INFO - OPENED BUY trade: BTCUSDT @ $73533.30 x 0.000272
+2026-02-04 21:38:34,224 - __main__ - ERROR - [ERROR] Bot error: UNIQUE constraint failed: trades.id
+2026-02-05 06:50:57,962 - __main__ - INFO - [START] Starting Micro-Scalp Bot (PAPER TRADING MODE)
+2026-02-05 06:50:57,993 - __main__ - INFO - Symbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
+2026-02-05 06:50:57,993 - __main__ - INFO - Initial Balance: $1000.00
+2026-02-05 06:51:04,234 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:51:04,983 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:51:05,756 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:51:05,756 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 06:52:06,577 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:52:07,421 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:52:08,257 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 06:53:09,640 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:53:10,972 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:53:11,743 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:53:11,743 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 06:54:12,566 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:54:13,331 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:54:14,096 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:54:14,096 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 06:55:14,867 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:55:15,707 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:55:16,481 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:55:16,482 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 06:56:17,362 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:56:18,149 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:56:18,904 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:56:18,904 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 06:57:21,087 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:57:22,275 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:57:23,097 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:57:23,097 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 06:58:24,034 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:58:24,818 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:58:25,586 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:58:25,586 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 06:59:30,745 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:59:31,598 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:59:32,425 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 06:59:32,446 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:00:33,250 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:00:34,026 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:00:34,766 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:00:34,766 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:01:35,876 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:01:37,708 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:01:39,328 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:01:39,343 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:02:41,195 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:02:42,490 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:02:43,383 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:02:43,412 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:03:44,319 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:03:45,149 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:03:46,523 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:03:46,523 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:04:47,371 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:04:48,183 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:04:48,950 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:04:48,950 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:05:49,806 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:05:50,596 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:05:51,440 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:05:51,440 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:06:52,276 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:06:53,049 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:06:53,888 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:06:53,889 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:07:54,769 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:07:55,574 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:07:56,401 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:07:56,401 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:08:57,217 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:08:58,034 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:08:59,101 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:08:59,111 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:10:00,226 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:10:01,168 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:10:02,391 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:10:02,391 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:11:03,257 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:11:04,112 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:11:04,939 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:11:04,939 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:12:05,761 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:12:06,605 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:12:07,466 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:12:07,468 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:13:08,277 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:13:09,315 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:13:10,088 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:13:10,089 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:14:10,952 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:14:12,139 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:14:12,989 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:14:12,990 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:15:13,837 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:15:14,615 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:15:15,424 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:15:15,425 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:16:12,799 - __main__ - INFO - [START] Starting Micro-Scalp Bot (PAPER TRADING MODE)
+2026-02-05 07:16:12,799 - __main__ - INFO - Symbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT']
+2026-02-05 07:16:12,800 - __main__ - INFO - Initial Balance: $1000.00
+2026-02-05 07:16:13,690 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:16:14,473 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:16:15,252 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:16:15,253 - __main__ - INFO - Waiting 60s before next check...
+2026-02-05 07:16:16,438 - __main__ - INFO - SELL signal for BTCUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:16:17,363 - __main__ - INFO - SELL signal for ETHUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:16:19,656 - __main__ - INFO - SELL signal for SOLUSDT: Downtrend confirmed (confidence: 0.6)
+2026-02-05 07:16:19,680 - __main__ - INFO - Waiting 60s before next check...

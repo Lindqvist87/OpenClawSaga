@@ -41,6 +41,8 @@ class Trade:
     exit_time: str = ""
     status: str = "OPEN"  # OPEN, CLOSED
     strategy: str = ""
+    stop_loss: float = 0.0
+    take_profit: float = 0.0
     
     def to_dict(self) -> Dict:
         return asdict(self)
@@ -302,7 +304,9 @@ class PaperTrader:
                 entry_time TEXT,
                 exit_time TEXT,
                 status TEXT,
-                strategy TEXT
+                strategy TEXT,
+                stop_loss REAL,
+                take_profit REAL
             )
         ''')
         
@@ -384,11 +388,15 @@ class PaperTrader:
         cursor = conn.cursor()
         
         cursor.execute('''
-            INSERT INTO trades VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO trades (id, symbol, side, entry_price, exit_price, quantity, 
+                               profit_loss, profit_loss_pct, entry_time, exit_time, 
+                               status, strategy, stop_loss, take_profit)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
             trade.id, trade.symbol, trade.side, trade.entry_price, trade.exit_price,
             trade.quantity, trade.profit_loss, trade.profit_loss_pct,
-            trade.entry_time, trade.exit_time, trade.status, trade.strategy
+            trade.entry_time, trade.exit_time, trade.status, trade.strategy,
+            trade.stop_loss, trade.take_profit
         ))
         
         conn.commit()
@@ -564,7 +572,7 @@ class MicroScalpBot:
                 if current_price:
                     pnl = (current_price - trade.entry_price) * trade.quantity
                     pnl_pct = ((current_price - trade.entry_price) / trade.entry_price) * 100
-                    print(f"  {trade.symbol}: ${trade.entry_price:.2f} → ${current_price:.2f} | P&L: ${pnl:.2f} ({pnl_pct:+.2f}%)")
+                    print(f"  {trade.symbol}: ${trade.entry_price:.2f} -> ${current_price:.2f} | P&L: ${pnl:.2f} ({pnl_pct:+.2f}%)")
         
         print("")
     
@@ -592,7 +600,7 @@ class MicroScalpBot:
                 time.sleep(self.check_interval)
                 
         except KeyboardInterrupt:
-            logger.info("🛑 Bot stopped by user")
+            logger.info("[STOP] Bot stopped by user")
             self.running = False
         except Exception as e:
             logger.error(f"[ERROR] Bot error: {e}")
