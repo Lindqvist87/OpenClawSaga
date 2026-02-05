@@ -764,10 +764,53 @@ class PaperTrader:
         # Setup database
         self.db_path = Path('paper_trades.db')
         self.setup_database()
+        self.sync_trade_counter()  # Fix: Sync counter with database
+        self.load_open_trades()     # Fix: Load open trades from database
         
         # Track performance
         self.total_fees = 0.0
         self.fee_rate = 0.001  # 0.1% trading fee (typical for Binance)
+    
+    def sync_trade_counter(self):
+        """Sync trade_id_counter with database to avoid UNIQUE constraint errors"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        cursor.execute("SELECT MAX(id) FROM trades")
+        result = cursor.fetchone()
+        conn.close()
+        
+        if result and result[0]:
+            self.trade_id_counter = result[0]
+            logger.info(f"Synced trade counter to {self.trade_id_counter} from database")
+    
+    def load_open_trades(self):
+        """Load open trades from database on startup"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM trades WHERE status = 'OPEN'")
+        rows = cursor.fetchall()
+        conn.close()
+        
+        for row in rows:
+            trade = Trade(
+                id=row[0],
+                symbol=row[1],
+                side=row[2],
+                entry_price=row[3],
+                exit_price=row[4] if row[4] else 0.0,
+                quantity=row[5],
+                profit_loss=row[6] if row[6] else 0.0,
+                profit_loss_pct=row[7] if row[7] else 0.0,
+                entry_time=row[8],
+                exit_time=row[9] if row[9] else "",
+                status=row[10],
+                strategy=row[11] if row[11] else "micro_scalp",
+                stop_loss=row[12] if row[12] else 0.0,
+                take_profit=row[13] if row[13] else 0.0,
+                exit_reason=row[14] if row[14] else ""
+            )
+            self.open_trades.append(trade)
+            logger.info(f"Loaded open trade #{trade.id}: {trade.symbol} {trade.side} @ ${trade.entry_price:.2f}")
     
     def setup_database(self):
         """Setup SQLite database for trade tracking"""
@@ -1442,36 +1485,20 @@ class MicroScalpBot:
                         logger.info(f"TRAILING STOP updated for {trade.symbol}: ${trade.stop_loss:.2f}")
             
             # Log SL/TP check every cycle for debugging
-            logger.debug(f"Trade #{trade.id} {trade.symbol}: Price=${current_price:.2f}, SL=${trade.stop_loss:.2f}, TP=${trade.take_profit:.2f}, P&L={current_pnl_pct:+.2f}%")
+            logger.info(f"Trade #{trade.id} {trade.symbol}: Price=${current_price:.2f}, SL=${trade.stop_loss:.2f}, TP=${trade.take_profit:.2f}, P&L={current_pnl_pct:+.2f}%")
             
             # Execute exit if reason found
             if exit_reason:
                 closed_trade = self.trader.close_trade(trade.id, current_price, exit_reason)
                 if closed_trade:
                     self.risk_manager.update_after_trade(closed_trade.profit_loss, self.trader.get_equity())
-                    logger.info(f"✓ Trade #{trade.id} closed: {exit_reason}, Final P&L: ${closed_trade.profit_loss:.2f}")
-                    closed_trade = self.trader.close_trade(trade.id, current_price, "stop_loss")
-                    if closed_trade:
-                        self.risk_manager.update_after_trade(closed_trade.profit_loss, self.trader.get_equity())
-                elif current_price >= trade.take_profit:
-                    logger.info(f"TAKE PROFIT triggered for {trade.symbol}")
-                    closed_trade = self.trader.close_trade(trade.id, current_price, "take_profit")
-                    if closed_trade:
-                        self.risk_manager.update_after_trade(closed_trade.profit_loss, self.trader.get_equity())
+                    logger.info(f"Trade #{trade.id} closed: {exit_reason}, Final P&L: ${closed_trade.profit_loss:.2f}")
     
     def check_new_signals(self):
-        """Check for new trading signals"""
+        """Check for new trading signals - NOW WITH SIGNAL-BASED EXIT LOGIC"""
         can_trade, reason = self.risk_manager.can_trade(self.trader.get_equity())
-        if not can_trade:
-            if self.loop_count % 10 == 0:  # Log only every 10 loops to avoid spam
-                logger.warning(f"Trading blocked: {reason}")
-            return
         
         for symbol in self.symbols:
-            # Skip if already have open trade for this symbol
-            if any(t.symbol == symbol for t in self.trader.open_trades):
-                continue
-            
             # Get price data
             candles = self.price_monitor.get_klines(symbol, interval='5m', limit=100)
             if not candles or len(candles) < 50:
@@ -1480,6 +1507,42 @@ class MicroScalpBot:
             # Generate signal
             signal = self.signal_generator.generate_signal(candles, symbol)
             
+            # Check if we have an open trade for this symbol
+            open_trade = None
+            for t in self.trader.open_trades:
+                if t.symbol == symbol:
+                    open_trade = t
+                    break
+            
+            # SIGNAL-BASED EXIT: Close opposite position when signal changes
+            if open_trade:
+                if open_trade.side == 'BUY' and signal.signal == 'SELL':
+                    logger.info(f"SIGNAL EXIT: Closing BUY trade for {symbol} due to SELL signal")
+                    current_price = self.price_monitor.get_price(symbol)
+                    if current_price:
+                        closed_trade = self.trader.close_trade(open_trade.id, current_price, f"signal_reverse_{signal.signal}")
+                        if closed_trade:
+                            self.risk_manager.update_after_trade(closed_trade.profit_loss, self.trader.get_equity())
+                    continue
+                elif open_trade.side == 'SELL' and signal.signal == 'BUY':
+                    logger.info(f"SIGNAL EXIT: Closing SELL trade for {symbol} due to BUY signal")
+                    current_price = self.price_monitor.get_price(symbol)
+                    if current_price:
+                        closed_trade = self.trader.close_trade(open_trade.id, current_price, f"signal_reverse_{signal.signal}")
+                        if closed_trade:
+                            self.risk_manager.update_after_trade(closed_trade.profit_loss, self.trader.get_equity())
+                    continue
+                else:
+                    # Same direction signal, skip opening new trade
+                    continue
+            
+            # No open trade - check if we can open new position
+            if not can_trade:
+                if self.loop_count % 10 == 0:  # Log only every 10 loops to avoid spam
+                    logger.warning(f"Trading blocked: {reason}")
+                continue
+            
+            # Open new trade on signal
             if signal.signal == 'BUY' and signal.confidence >= 0.6:
                 logger.info(f"BUY signal for {symbol}: {signal.reason} (confidence: {signal.confidence:.2f})")
                 
@@ -1497,6 +1560,26 @@ class MicroScalpBot:
                 
                 # Open trade
                 trade = self.trader.open_trade(symbol, 'BUY', current_price, quantity, stop_loss, take_profit)
+                if trade:
+                    self.risk_manager.daily_stats['trades'] += 1
+            
+            elif signal.signal == 'SELL' and signal.confidence >= 0.6:
+                logger.info(f"SELL signal for {symbol}: {signal.reason} (confidence: {signal.confidence:.2f})")
+                
+                current_price = signal.indicators['price']
+                atr = signal.indicators.get('atr')
+                
+                # Calculate position size
+                quantity, position_pct = self.risk_manager.calculate_dynamic_position_size(
+                    self.trader.get_equity(), current_price, atr, signal.confidence
+                )
+                
+                # Calculate stop loss and take profit
+                stop_loss = self.risk_manager.calculate_stop_loss(current_price, 'SELL', atr)
+                take_profit = self.risk_manager.calculate_take_profit(current_price, 'SELL', stop_loss)
+                
+                # Open trade
+                trade = self.trader.open_trade(symbol, 'SELL', current_price, quantity, stop_loss, take_profit)
                 if trade:
                     self.risk_manager.daily_stats['trades'] += 1
     
